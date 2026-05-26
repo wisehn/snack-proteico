@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import freshness from '@/data/freshness.json'
+import reviewsData from '@/data/reviews.json'
 
 // ─── constants ───────────────────────────────────────────────────────────────
 
@@ -759,6 +760,64 @@ export default function HomePage() {
                   <p className="text-xs text-[#7A5C46] leading-relaxed">{desc}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Reviews ───────────────────────────────────────────────── */}
+        <section className="py-16 px-4 bg-[#FFF8F0]">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-10">
+              <p className="text-[#C05C14] font-semibold text-sm uppercase tracking-wider mb-2">
+                Avaliações verificadas · Konfidency
+              </p>
+              <h2 className="text-2xl md:text-4xl font-black text-dark mb-3">
+                O que os clientes dizem
+              </h2>
+              <div className="flex items-center justify-center gap-6 mt-4">
+                <div className="text-center">
+                  <span className="text-4xl font-black text-[#C05C14]">{reviewsData.aggregate.rating}</span>
+                  <span className="text-amber-400 text-lg ml-1">★</span>
+                  <p className="text-xs text-[#7A5C46] mt-0.5">nota geral</p>
+                </div>
+                <div className="text-center">
+                  <span className="text-4xl font-black text-dark">+{reviewsData.aggregate.count}</span>
+                  <p className="text-xs text-[#7A5C46] mt-0.5">reviews verificados</p>
+                </div>
+                <div className="text-center">
+                  <span className="text-4xl font-black text-green-600">{reviewsData.aggregate.recommended}%</span>
+                  <p className="text-xs text-[#7A5C46] mt-0.5">recomendam</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+              {reviewsData.featured.map((r) => (
+                <article key={r.id} className="bg-white rounded-2xl border border-[#E8D5C4] p-5 flex flex-col gap-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-amber-400 text-base">{'★'.repeat(r.rating)}</span>
+                    <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-[#F5E6DA] text-[#7A5C46]">
+                      {r.flavor}
+                    </span>
+                  </div>
+                  <blockquote className="text-sm text-[#3B1F0A] leading-relaxed flex-1">
+                    "{r.text}"
+                  </blockquote>
+                  <div className="border-t border-[#E8D5C4] pt-3 flex items-center justify-between">
+                    <p className="text-sm font-semibold text-dark">{r.name}</p>
+                    <span className="text-xs text-[#7A5C46]">✓ verificado</span>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <a
+                href="/avaliacoes"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-[#C05C14] text-[#C05C14] font-bold hover:bg-[#C05C14] hover:text-white transition-colors text-sm"
+              >
+                Ver todas as {reviewsData.aggregate.count} avaliações →
+              </a>
             </div>
           </div>
         </section>
