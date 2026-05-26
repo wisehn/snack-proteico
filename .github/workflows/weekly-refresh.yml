@@ -1,0 +1,30 @@
+name: Weekly Content Freshness
+
+on:
+  schedule:
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update freshness timestamp
+        run: |
+          DATE=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+          VERSION=$(date +%Y%m%d)
+          printf '{"lastUpdated":"%s","version":"%s"}\n' "$DATE" "$VERSION" > data/freshness.json
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/freshness.json
+          git diff --staged --quiet && exit 0
+          git commit -m "chore: weekly freshness refresh"
+          git push
