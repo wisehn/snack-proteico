@@ -139,6 +139,7 @@ export default function ComparativoPage() {
         description: 'Comparativo completo dos principais snacks proteicos disponíveis no Brasil por proteína por porção, ingredientes, preço e certificações.',
         url: 'https://snackproteico.com.br/comparativo-snacks-proteicos-brasil',
         publisher: { '@type': 'Organization', name: 'snackproteico.com.br', url: 'https://snackproteico.com.br' },
+        datePublished: '2026-05-27',
         dateModified: new Date().toISOString().split('T')[0],
       },
       {
@@ -290,6 +291,27 @@ export default function ComparativoPage() {
                   <p className="text-sm text-[#5C3D2E] leading-relaxed">{faq.a}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Veja também */}
+        <section className="py-10 px-4 bg-[#FFF8F0] border-t border-[#E8D5C4]">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-base font-black text-[#1A0A00] mb-4 uppercase tracking-wide">Veja também</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <a href="/snack-proteico-vegano" className="bg-white rounded-xl border border-[#E8D5C4] p-4 hover:border-[#C05C14] transition-colors">
+                <p className="font-bold text-[#1A0A00] text-sm">Snack Proteico Vegano</p>
+                <p className="text-xs text-[#7A5C46] mt-1">Guia completo sobre proteína de ervilha e opções plant-based</p>
+              </a>
+              <a href="/snack-proteico-sem-gluten" className="bg-white rounded-xl border border-[#E8D5C4] p-4 hover:border-[#C05C14] transition-colors">
+                <p className="font-bold text-[#1A0A00] text-sm">Snack Proteico Sem Glúten</p>
+                <p className="text-xs text-[#7A5C46] mt-1">Certificações, glúten oculto e como escolher com segurança</p>
+              </a>
+              <a href="/avaliacoes" className="bg-white rounded-xl border border-[#E8D5C4] p-4 hover:border-[#C05C14] transition-colors">
+                <p className="font-bold text-[#1A0A00] text-sm">Avaliações Verificadas</p>
+                <p className="text-xs text-[#7A5C46] mt-1">+280 reviews de compradores reais · 4.8★</p>
+              </a>
             </div>
           </div>
         </section>

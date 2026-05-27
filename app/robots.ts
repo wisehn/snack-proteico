@@ -6,10 +6,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
+        disallow: ['/keystatic', '/api/keystatic'],
       },
       {
         userAgent: ['GPTBot', 'ChatGPT-User', 'PerplexityBot', 'ClaudeBot', 'anthropic-ai', 'Google-Extended'],
         allow: '/',
+        disallow: ['/keystatic', '/api/keystatic'],
       },
     ],
     sitemap: 'https://snackproteico.com.br/sitemap.xml',

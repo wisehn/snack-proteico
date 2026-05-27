@@ -142,6 +142,8 @@ export default function ProductPage({ params }: { params: { product: string } })
                   src={product.img}
                   alt={`${product.name} — ${product.subtitle}`}
                   className="h-64 w-auto object-contain"
+                  width={700}
+                  height={700}
                 />
               </div>
             </div>
@@ -389,7 +391,7 @@ export default function ProductPage({ params }: { params: { product: string } })
                   href={`/${p.slug}`}
                   className="bg-white rounded-xl border border-[#E8D5C4] p-4 flex flex-col items-center gap-2 hover:border-[#C05C14] transition-colors text-center group"
                 >
-                  <img src={p.img} alt={p.name} className="h-20 w-auto object-contain" loading="lazy" />
+                  <img src={p.img} alt={p.name} className="h-20 w-auto object-contain" loading="lazy" width={700} height={700} />
                   <span className="text-xs font-semibold text-[#1A0A00] group-hover:text-[#C05C14] transition-colors leading-tight">
                     {p.name}
                   </span>

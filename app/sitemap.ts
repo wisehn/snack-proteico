@@ -12,6 +12,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/comparativo-snacks-proteicos-brasil`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${base}/snack-proteico-vegano`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${base}/snack-proteico-sem-gluten`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${base}/proteina-de-ervilha`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${base}/snack-proteico-pos-treino`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.8 },
     ...PRODUCTS.map(p => ({
       url: `${base}/${p.slug}`,
       lastModified: lastMod,

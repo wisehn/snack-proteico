@@ -53,6 +53,7 @@ export default function SnackSemGlutenPage() {
         description: 'Guia completo sobre snacks proteicos sem glúten no Brasil.',
         url: 'https://snackproteico.com.br/snack-proteico-sem-gluten',
         publisher: { '@type': 'Organization', name: 'snackproteico.com.br', url: 'https://snackproteico.com.br' },
+        datePublished: '2026-05-27',
         dateModified: new Date().toISOString().split('T')[0],
       },
       {
@@ -170,7 +171,7 @@ export default function SnackSemGlutenPage() {
               {PRODUCTS.map(p => (
                 <a key={p.id} href={`/${p.slug}`}
                   className="bg-white rounded-2xl border border-[#E8D5C4] p-4 flex flex-col items-center gap-3 hover:border-[#2A6AA0] transition-colors group">
-                  <img src={p.img} alt={p.name} className="h-28 w-auto object-contain" loading="lazy" />
+                  <img src={p.img} alt={p.name} className="h-28 w-auto object-contain" loading="lazy" width={700} height={700} />
                   <div className="text-center">
                     <p className="font-bold text-[#1A0A00] text-sm group-hover:text-[#2A6AA0] transition-colors">{p.name}</p>
                     <p className="text-xs text-[#7A5C46]">{p.subtitle}</p>
@@ -252,6 +253,26 @@ export default function SnackSemGlutenPage() {
                   <p className="text-sm text-[#5C3D2E] leading-relaxed">{faq.a}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="py-10 px-4 bg-[#FFF8F0] border-t border-[#E8D5C4]">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-base font-black text-[#1A0A00] mb-4 uppercase tracking-wide">Veja também</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <a href="/snack-proteico-vegano" className="bg-white rounded-xl border border-[#E8D5C4] p-4 hover:border-[#C05C14] transition-colors">
+                <p className="font-bold text-[#1A0A00] text-sm">Snack Proteico Vegano</p>
+                <p className="text-xs text-[#7A5C46] mt-1">Fontes de proteína vegetal de alta qualidade</p>
+              </a>
+              <a href="/comparativo-snacks-proteicos-brasil" className="bg-white rounded-xl border border-[#E8D5C4] p-4 hover:border-[#C05C14] transition-colors">
+                <p className="font-bold text-[#1A0A00] text-sm">Comparativo de Snacks Proteicos</p>
+                <p className="text-xs text-[#7A5C46] mt-1">Qual produto entrega mais proteína por porção?</p>
+              </a>
+              <a href="/avaliacoes" className="bg-white rounded-xl border border-[#E8D5C4] p-4 hover:border-[#C05C14] transition-colors">
+                <p className="font-bold text-[#1A0A00] text-sm">Avaliações Verificadas</p>
+                <p className="text-xs text-[#7A5C46] mt-1">+280 reviews de compradores reais</p>
+              </a>
             </div>
           </div>
         </section>
