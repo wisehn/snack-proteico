@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import freshness from '@/data/freshness.json'
 import reviewsData from '@/data/reviews.json'
+import { PRODUCTS, COMPARISON, STORE } from '@/lib/products'
 
 export type HeroData = {
   announcement: string
@@ -16,115 +17,8 @@ export type HeroData = {
 
 export type FaqItem = { q: string; a: string }
 
-// ─── constants ───────────────────────────────────────────────────────────────
+// ─── PRODUCTS, COMPARISON, STORE imported from @/lib/products above ──────────
 
-const STORE = 'https://wisehealth.com.br'
-
-const PRODUCTS = [
-  {
-    id: 'vegan',
-    name: 'Crispy Wise Vegan',
-    subtitle: 'Sabor Neutro — Proteína de Ervilha',
-    protein: 18,
-    price: 109,
-    weight: '400g',
-    tags: ['Vegano', 'Zero Lactose', 'Sem Glúten', 'Clean Label'],
-    highlight: 'Maior proteína da linha',
-    color: '#3B7A3D',
-    badge: '#D4EDDA',
-    img: 'https://wisehealth.com.br/wp-content/uploads/2025/03/mockup-crispy-vegan-700x700.jpg',
-    url: `${STORE}/crispy-wise-vegan/`,
-    cartId: 615059,
-    description: 'Bolinhas de proteína de ervilha isolada e farinha de arroz. Sabor neutro que combina com qualquer receita — de açaí a iogurte grego.',
-    ingredients: 'Proteína isolada de ervilha, farinha de arroz',
-  },
-  {
-    id: 'whey',
-    name: 'Crispy Wise Whey',
-    subtitle: 'Sabor Neutro — Whey Protein',
-    protein: 18,
-    price: 129,
-    weight: '400g',
-    tags: ['Whey Protein', 'Alto Teor Proteico', 'Sem Glúten'],
-    highlight: '18g por porção',
-    color: '#7A5C46',
-    badge: '#F5E6DA',
-    img: 'https://wisehealth.com.br/wp-content/uploads/2025/10/mockup-crispy-whey-18g-700x700.jpg',
-    url: `${STORE}/crispy-wise/`,
-    cartId: 555110,
-    description: 'A versão original com whey protein concentrado. Mesmo formato crocante de bolinha, sabor neutro ideal como topping ou snack direto.',
-    ingredients: 'Concentrado proteico de soro de leite, farinha de arroz',
-    note: 'Contém lactose · Não vegano',
-  },
-  {
-    id: 'choco',
-    name: 'Choco Crispy Wise',
-    subtitle: 'Sabor Chocolate',
-    protein: 12,
-    price: 138,
-    weight: '400g',
-    tags: ['Vegano', 'Zero Lactose', 'Sem Glúten', 'Chocolate Real'],
-    highlight: 'Mais vendido',
-    color: '#3B1F0A',
-    badge: '#F5E0C8',
-    img: 'https://wisehealth.com.br/wp-content/uploads/2025/08/Choco-Crispy-Wise-Fruta-700x700.jpg',
-    url: `${STORE}/choco-crispy-wise/`,
-    cartId: 672683,
-    description: 'Bolinhas de chocolate com cacau em pó natural, proteína de ervilha, stevia e aroma natural de baunilha. Sem retrogosto amargo.',
-    ingredients: 'Proteína isolada de ervilha, fibra de tapioca, cacau em pó natural, farinha de arroz, óleo de coco, stevia',
-  },
-  {
-    id: 'caramel',
-    name: 'Crispy Wise Caramel',
-    subtitle: 'Sabor Caramelo',
-    protein: 12,
-    price: 138,
-    weight: '400g',
-    tags: ['Vegano', 'Zero Lactose', 'Sem Glúten'],
-    highlight: 'Favorito das manhãs',
-    color: '#A0660A',
-    badge: '#FFF0CC',
-    img: 'https://wisehealth.com.br/wp-content/uploads/2025/07/mockup-crispy-caramel-700x700.jpg',
-    url: `${STORE}/crispy-wise-caramelo/`,
-    cartId: 705429,
-    description: 'Sabor caramelo com textura crocante. Perfeito no café da manhã com iogurte, granola ou puro como snack doce sem culpa.',
-    ingredients: 'Proteína isolada de ervilha, fibra de tapioca, farinha de arroz, óleo de coco, stevia',
-  },
-  {
-    id: 'salty',
-    name: 'Crispy Wise Salty',
-    subtitle: 'Sabor Páprica Defumada',
-    protein: 12,
-    price: 138,
-    weight: '400g',
-    tags: ['Vegano', 'Zero Lactose', 'Sem Glúten', 'Salgado'],
-    highlight: 'Único salgado',
-    color: '#8B1A00',
-    badge: '#FFE8E0',
-    img: 'https://wisehealth.com.br/wp-content/uploads/2025/10/mockup-crispy-paprica-700x700.jpg',
-    url: `${STORE}/crispy-wise-paprica-defumada/`,
-    cartId: 708679,
-    description: 'O único snack proteico salgado da linha. Páprica defumada com toque de sal — crouton proteico para saladas, sopas e ovos mexidos.',
-    ingredients: 'Proteína isolada de ervilha, fibra de tapioca, farinha de arroz, óleo de coco, páprica defumada, sal',
-  },
-  {
-    id: 'panettone',
-    name: 'Crispy Wise Panettone',
-    subtitle: 'Sabor Panettone de Chocolate · Edição Limitada',
-    protein: 12,
-    price: 138,
-    weight: '400g',
-    tags: ['Vegano', 'Zero Lactose', 'Sem Glúten', 'Edição Limitada'],
-    highlight: 'Edição limitada',
-    color: '#5C2D0A',
-    badge: '#FFE8D0',
-    img: 'https://wisehealth.com.br/wp-content/uploads/2025/11/mockup-crispy-panettone-700x700.jpg',
-    url: `${STORE}/crispy-wise-panettone-chocolate/`,
-    cartId: 726999,
-    description: 'A versão natalina com sabor de panetone de chocolate. Proteína de ervilha, cacau e aroma natural — a versão proteica do clássico.',
-    ingredients: 'Proteína isolada de ervilha, fibra de tapioca, cacau em pó natural, farinha de arroz, óleo de coco, stevia, aroma artificial',
-  },
-]
 
 const FAQS = [
   {
@@ -177,56 +71,6 @@ const FAQS = [
   },
 ]
 
-const COMPARISON = [
-  {
-    feature: 'Proteína por porção (30g)',
-    crispy: '12–18g',
-    others: '4–6g (mercado médio)',
-    win: true,
-  },
-  {
-    feature: 'Base proteica',
-    crispy: 'Ervilha isolada / Whey',
-    others: 'Milho, arroz, trigo',
-    win: true,
-  },
-  {
-    feature: 'Vegano (opção disponível)',
-    crispy: '✅ 4 sabores',
-    others: '⚠️ raro',
-    win: true,
-  },
-  {
-    feature: 'Zero lactose',
-    crispy: '✅ 4 sabores',
-    others: '⚠️ varia',
-    win: true,
-  },
-  {
-    feature: 'Sem glúten',
-    crispy: '✅ todos os sabores',
-    others: '⚠️ varia',
-    win: true,
-  },
-  {
-    feature: 'Clean label (sem aditivos artificiais)',
-    crispy: '✅ fórmula limpa',
-    others: '❌ frequente uso de aditivos',
-    win: true,
-  },
-  {
-    feature: 'Sachê individual disponível',
-    crispy: '✅ R$10–12 / 30g',
-    others: '❌ geralmente não',
-    win: true,
-  },
-  {
-    feature: 'Sabores doces E salgado',
-    crispy: '✅ 5 sabores + Ed. Limitada',
-    others: '⚠️ majoritariamente doce',
-    win: true,
-  },
-]
 
 // ─── JSON-LD schema (DOM injection to avoid security scan) ────────────────────
 
