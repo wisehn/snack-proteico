@@ -7,7 +7,7 @@ const reader = createReader(path.join(process.cwd()), keystaticConfig)
 
 const HERO_FALLBACK: HeroData = {
   announcement: '🚀 Kit Degustação 5 sabores por R$49 — pedir agora →',
-  announcement_url: 'https://wisehealth.com.br/kit-degustacao-5-sabores-crispy-wise/',
+  announcement_url: 'https://wisehealth.com.br/kit-degustacao-crispy-wise/',
   headline: 'Snack Proteico de Verdade: 12–18g por Porção, Sem Lactose, Sem Retrogosto',
   subtitle: 'O Crispy Wise é a linha de snacks proteicos com mais proteína por porção do Brasil. Bolinhas crocantes em 5+ sabores — veganos, sem glúten e com clean label.',
   cta_primary: 'Ver todos os sabores ↓',

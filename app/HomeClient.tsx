@@ -380,7 +380,7 @@ export default function HomeClient({ hero, faqs }: { hero: HeroData; faqs: FaqIt
                 {hero.cta_primary}
               </CTAButton>
               <CTAButton
-                href={`${STORE}/kit-degustacao-5-sabores-crispy-wise/`}
+                href={`${STORE}/kit-degustacao-crispy-wise/`}
                 className="px-8 py-4 text-base bg-white/10 border border-white/30 text-white hover:bg-white/20"
               >
                 {hero.cta_kit}
@@ -710,7 +710,7 @@ export default function HomeClient({ hero, faqs }: { hero: HeroData; faqs: FaqIt
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <CTAButton
-                href={`${STORE}/kit-degustacao-5-sabores-crispy-wise/`}
+                href={`${STORE}/kit-degustacao-crispy-wise/`}
                 className="px-8 py-4 text-base bg-white text-[#C05C14] font-extrabold"
               >
                 Kit Degustação — R$49 →

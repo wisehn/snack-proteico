@@ -224,7 +224,7 @@ export default function ProductPage({ params }: { params: { product: string } })
                   Comprar agora — R${product.price}
                 </a>
                 <a
-                  href="https://wisehealth.com.br/kit-degustacao-5-sabores-crispy-wise/"
+                  href="https://wisehealth.com.br/kit-degustacao-crispy-wise/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 text-center font-bold py-3.5 px-6 rounded-full border-2 border-[#1A0A00] text-[#1A0A00] hover:bg-[#1A0A00] hover:text-white transition-all"
@@ -365,7 +365,7 @@ export default function ProductPage({ params }: { params: { product: string } })
                 Comprar {product.name} — R${product.price}
               </a>
               <a
-                href="https://wisehealth.com.br/kit-degustacao-5-sabores-crispy-wise/"
+                href="https://wisehealth.com.br/kit-degustacao-crispy-wise/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-bold py-4 px-8 rounded-full bg-white/20 border border-white/40 text-white hover:bg-white/30 transition-all text-base"
