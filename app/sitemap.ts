@@ -9,6 +9,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: base, lastModified: lastMod, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${base}/avaliacoes`, lastModified: lastMod, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${base}/comparativo-snacks-proteicos-brasil`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${base}/snack-proteico-vegano`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${base}/snack-proteico-sem-gluten`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.85 },
     ...PRODUCTS.map(p => ({
       url: `${base}/${p.slug}`,
       lastModified: lastMod,

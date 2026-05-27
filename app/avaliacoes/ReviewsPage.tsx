@@ -5,6 +5,14 @@ import reviewsData from '@/data/reviews.json'
 
 const STORE = 'https://wisehealth.com.br'
 
+const FLAVOR_SLUG: Record<string, string> = {
+  'Neutro':              '/crispy-wise-whey',
+  'Chocolate':           '/choco-crispy-wise',
+  'Caramelo':            '/crispy-wise-caramel',
+  'Páprica Defumada':    '/crispy-wise-salty',
+  'Panettone Chocolate': '/crispy-wise-panettone',
+}
+
 const FLAVOR_COLORS: Record<string, { bg: string; text: string }> = {
   'Neutro':              { bg: '#F5E6DA', text: '#7A5C46' },
   'Chocolate':           { bg: '#F5E0C8', text: '#3B1F0A' },
@@ -49,12 +57,13 @@ function ReviewCard({ review }: { review: Review }) {
           <Stars rating={review.rating} />
           <meta itemProp="reviewRating" content={review.rating.toString()} />
         </div>
-        <span
-          className="text-xs font-semibold px-2 py-0.5 rounded-full shrink-0"
+        <a
+          href={FLAVOR_SLUG[review.flavor] ?? '#'}
+          className="text-xs font-semibold px-2 py-0.5 rounded-full shrink-0 hover:opacity-80 transition-opacity"
           style={{ backgroundColor: colors.bg, color: colors.text }}
         >
           {review.flavor}
-        </span>
+        </a>
       </div>
 
       <blockquote

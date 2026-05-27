@@ -94,9 +94,28 @@ function buildSchema(faqs: FaqItem[]) {
       {
         '@type': 'Organization',
         '@id': 'https://snackproteico.com.br/#organization',
-        name: 'snackproteico.com.br',
+        name: 'WiseHealth Nutrition',
         url: 'https://snackproteico.com.br',
-        sameAs: ['https://wisehealth.com.br', 'https://www.instagram.com/wisehealthbr'],
+        logo: { '@type': 'ImageObject', url: 'https://wisehealth.com.br/wp-content/uploads/2021/01/logo-wisehealth-horizontal.png' },
+        sameAs: [
+          'https://wisehealth.com.br',
+          'https://www.instagram.com/wisehealthnutrition',
+          'https://www.facebook.com/wisehealthnutrition',
+        ],
+        contactPoint: { '@type': 'ContactPoint', telephone: '+55-47-99743-4097', contactType: 'customer service' },
+      },
+      {
+        '@type': 'HowTo',
+        name: 'Como usar Crispy Wise no dia a dia',
+        description: 'Seis formas práticas de incluir o Crispy Wise na sua rotina para aumentar a ingestão de proteína.',
+        step: [
+          { '@type': 'HowToStep', name: 'Topping de açaí', text: 'Substitua granola ou granulado pelo Crispy Wise. Adicione na hora de servir para preservar a crocância. +12g de proteína por porção.' },
+          { '@type': 'HowToStep', name: 'Iogurte grego', text: 'Coloque uma porção de 30g por cima do iogurte antes de comer. Não misture com antecedência para não perder a textura crocante.' },
+          { '@type': 'HowToStep', name: 'Snack direto da embalagem', text: 'Consuma 30g (uma porção) direto como lanche rápido entre refeições. Equivale a 12–18g de proteína sem precisar preparar nada.' },
+          { '@type': 'HowToStep', name: 'Crouton em saladas (versão Salty)', text: 'Use a versão páprica defumada como substituto do crouton de pão tradicional em saladas e sopas. Sem glúten, com proteína.' },
+          { '@type': 'HowToStep', name: 'Overnight oats', text: 'Prepare os oats na véspera e adicione o Crispy Wise somente na hora de comer para manter a crocância e aumentar a proteína do prato.' },
+          { '@type': 'HowToStep', name: 'Ovos mexidos (versão Salty)', text: 'Misture ou adicione por cima dos ovos mexidos. O sabor defumado da páprica complementa o ovo e adiciona textura crocante.' },
+        ],
       },
       {
         '@type': 'ItemList',
@@ -198,7 +217,7 @@ function ProductCard({ p }: { p: typeof PRODUCTS[0] }) {
       itemScope
       itemType="https://schema.org/Product"
     >
-      <div className="relative bg-[#FFF8F0] p-6 flex items-center justify-center" style={{ minHeight: 220 }}>
+      <a href={`/${p.slug}`} className="block relative bg-[#FFF8F0] p-6 flex items-center justify-center hover:bg-[#FFF0E5] transition-colors" style={{ minHeight: 220 }}>
         {p.highlight && (
           <span
             className="absolute top-3 left-3 text-xs font-bold px-3 py-1 rounded-full text-white"
@@ -216,11 +235,13 @@ function ProductCard({ p }: { p: typeof PRODUCTS[0] }) {
           onError={(e) => { (e.target as HTMLImageElement).src = 'https://wisehealth.com.br/wp-content/uploads/2025/03/mockup-crispy-vegan-700x700.jpg' }}
         />
         <meta itemProp="name" content={p.name} />
-      </div>
+      </a>
 
       <div className="p-5 flex flex-col flex-1 gap-3">
         <div>
-          <h3 className="font-bold text-lg text-dark leading-tight" itemProp="name">{p.name}</h3>
+          <a href={`/${p.slug}`} className="hover:text-[#C05C14] transition-colors">
+            <h3 className="font-bold text-lg text-dark leading-tight" itemProp="name">{p.name}</h3>
+          </a>
           <p className="text-sm text-[#7A5C46] mt-0.5">{p.subtitle}</p>
         </div>
 
@@ -251,7 +272,7 @@ function ProductCard({ p }: { p: typeof PRODUCTS[0] }) {
           </div>
         </div>
 
-        <div itemProp="offers" itemScope itemType="https://schema.org/Offer">
+        <div itemProp="offers" itemScope itemType="https://schema.org/Offer" className="flex flex-col gap-2">
           <meta itemProp="price" content={p.price.toString()} />
           <meta itemProp="priceCurrency" content="BRL" />
           <meta itemProp="availability" content="https://schema.org/InStock" />
@@ -261,6 +282,12 @@ function ProductCard({ p }: { p: typeof PRODUCTS[0] }) {
           >
             Comprar agora →
           </CTAButton>
+          <a
+            href={`/${p.slug}`}
+            className="w-full py-2 text-xs text-center text-[#C05C14] font-semibold border border-[#E8D5C4] rounded-full hover:border-[#C05C14] transition-colors"
+          >
+            Ver ficha completa + reviews →
+          </a>
         </div>
       </div>
     </article>
@@ -737,37 +764,56 @@ export default function HomeClient({ hero, faqs }: { hero: HeroData; faqs: FaqIt
       {/* Footer */}
       <footer className="bg-[#1A0A00] text-[#D4B8A0] py-10 px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div className="md:col-span-1">
               <p className="font-black text-white text-lg mb-2">
                 snack<span className="text-[#E8732A]">proteico</span>.com.br
               </p>
-              <p className="text-sm leading-relaxed">
-                Guia independente sobre snacks proteicos no Brasil.
-                Comparamos, analisamos e recomendamos os melhores produtos
-                para quem quer proteína sem complicação.
+              <p className="text-sm leading-relaxed mb-4">
+                Guia de snacks proteicos no Brasil — focado na linha Crispy Wise da WiseHealth Nutrition.
               </p>
+              <div className="flex gap-3">
+                <a href="https://instagram.com/wisehealthnutrition" target="_blank" rel="noopener noreferrer" aria-label="Instagram WiseHealth" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors text-sm">
+                  IG
+                </a>
+                <a href="https://facebook.com/wisehealthnutrition" target="_blank" rel="noopener noreferrer" aria-label="Facebook WiseHealth" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors text-sm">
+                  FB
+                </a>
+                <a href="https://wa.me/5547997434097" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp WiseHealth" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors text-sm">
+                  WA
+                </a>
+              </div>
             </div>
             <div>
-              <h3 className="font-semibold text-white mb-3">Sabores Crispy Wise</h3>
+              <h3 className="font-semibold text-white mb-3">Linha Crispy Wise</h3>
               <ul className="text-sm flex flex-col gap-1.5">
                 {PRODUCTS.map(p => (
                   <li key={p.id}>
-                    <a href={p.url} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
-                      {p.name} →
+                    <a href={`/${p.slug}`} className="hover:text-white transition-colors">
+                      {p.name}
                     </a>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold text-white mb-3">Informações</h3>
+              <h3 className="font-semibold text-white mb-3">Guias</h3>
               <ul className="text-sm flex flex-col gap-1.5">
                 <li><a href="#produtos" className="hover:text-white transition-colors">Todos os produtos</a></li>
-                <li><a href="#comparativo" className="hover:text-white transition-colors">Comparativo de mercado</a></li>
-                <li><a href="#como-usar" className="hover:text-white transition-colors">Como usar</a></li>
+                <li><a href="#comparativo" className="hover:text-white transition-colors">Comparativo</a></li>
+                <li><a href="/avaliacoes" className="hover:text-white transition-colors">Avaliações verificadas</a></li>
+                <li><a href="/comparativo-snacks-proteicos-brasil" className="hover:text-white transition-colors">Snacks proteicos no Brasil</a></li>
+                <li><a href="/snack-proteico-vegano" className="hover:text-white transition-colors">Snack proteico vegano</a></li>
+                <li><a href="/snack-proteico-sem-gluten" className="hover:text-white transition-colors">Snack proteico sem glúten</a></li>
                 <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
-                <li><a href={STORE} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">WiseHealth Nutrition →</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold text-white mb-3">WiseHealth Nutrition</h3>
+              <ul className="text-sm flex flex-col gap-2 text-[#A08070]">
+                <li><a href={STORE} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">wisehealth.com.br →</a></li>
+                <li><a href="https://wa.me/5547997434097" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">(47) 99743-4097</a></li>
+                <li>CNPJ 29.781.868/0001-58</li>
               </ul>
             </div>
           </div>
