@@ -3,7 +3,6 @@ import { Metadata } from 'next'
 import reviewsData from '@/data/reviews.json'
 import { PRODUCTS } from '@/lib/products'
 import ProductFAQ from './ProductFAQ'
-import SchemaInjector from './SchemaInjector'
 
 export async function generateStaticParams() {
   return PRODUCTS.map(p => ({ product: p.slug }))
@@ -48,6 +47,7 @@ export default function ProductPage({ params }: { params: { product: string } })
         description: product.longDescription,
         image: product.img,
         brand: { '@type': 'Brand', name: 'WiseHealth Nutrition' },
+        mpn: product.id,
         url: `https://snackproteico.com.br/${product.slug}`,
         offers: {
           '@type': 'Offer',
@@ -55,6 +55,41 @@ export default function ProductPage({ params }: { params: { product: string } })
           price: product.price.toString(),
           availability: 'https://schema.org/InStock',
           url: product.url,
+          hasMerchantReturnPolicy: {
+            '@type': 'MerchantReturnPolicy',
+            applicableCountry: 'BR',
+            returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+            merchantReturnDays: 7,
+            returnMethod: 'https://schema.org/ReturnByMail',
+            returnFees: 'https://schema.org/FreeReturn',
+          },
+          shippingDetails: {
+            '@type': 'OfferShippingDetails',
+            shippingRate: {
+              '@type': 'MonetaryAmount',
+              value: '0',
+              currency: 'BRL',
+            },
+            shippingDestination: {
+              '@type': 'DefinedRegion',
+              addressCountry: 'BR',
+            },
+            deliveryTime: {
+              '@type': 'ShippingDeliveryTime',
+              handlingTime: {
+                '@type': 'QuantitativeValue',
+                minValue: 1,
+                maxValue: 2,
+                unitCode: 'DAY',
+              },
+              transitTime: {
+                '@type': 'QuantitativeValue',
+                minValue: 3,
+                maxValue: 15,
+                unitCode: 'DAY',
+              },
+            },
+          },
         },
         nutrition: {
           '@type': 'NutritionInformation',
@@ -98,9 +133,12 @@ export default function ProductPage({ params }: { params: { product: string } })
     ],
   }
 
+  const schemaString = JSON.stringify(schema)
+
   return (
     <>
-      <SchemaInjector schema={schema} />
+      {/* eslint-disable-next-line react/no-danger */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaString }} />
 
       {/* Header */}
       <header className="sticky top-0 z-40 bg-[#FDFAF6]/95 backdrop-blur border-b border-[#E8D5C4]">
