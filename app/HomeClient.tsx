@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import freshness from '@/data/freshness.json'
 import reviewsData from '@/data/reviews.json'
@@ -16,6 +16,24 @@ export type HeroData = {
 }
 
 export type FaqItem = { q: string; a: string }
+
+// ─── Guias internos (link interno p/ todas as páginas de conteúdo) ───────────
+const GUIDES = [
+  { href: '/o-que-e-snack-proteico', title: 'O que é snack proteico', desc: 'Definição, benefícios e como escolher o ideal.' },
+  { href: '/quantas-gramas-proteina-por-dia', title: 'Quantas gramas de proteína por dia', desc: 'Cálculo por peso corporal e objetivo.' },
+  { href: '/proteina-de-ervilha', title: 'Proteína de ervilha', desc: 'A ciência do isolado e por que não tem retrogosto.' },
+  { href: '/proteina-vegetal-fontes', title: 'Fontes de proteína vegetal', desc: 'As melhores opções plant-based comparadas.' },
+  { href: '/snack-proteico-pos-treino', title: 'Snack proteico pós-treino', desc: 'O que comer depois do treino para recuperar.' },
+  { href: '/snack-proteico-emagrecer', title: 'Snack proteico para emagrecer', desc: 'Saciedade, déficit calórico e preservação muscular.' },
+  { href: '/snack-proteico-sem-lactose', title: 'Snack proteico sem lactose', desc: 'Opções zero lactose para intolerantes.' },
+  { href: '/snack-proteico-sem-gluten', title: 'Snack proteico sem glúten', desc: 'Seguro para celíacos e sensíveis ao glúten.' },
+  { href: '/snack-proteico-vegano', title: 'Snack proteico vegano', desc: 'Lanches 100% plant-based com proteína real.' },
+  { href: '/snack-proteico-salgado', title: 'Snack proteico salgado', desc: 'Alternativas à versão doce para qualquer hora.' },
+  { href: '/receitas-com-snack-proteico', title: 'Receitas com snack proteico', desc: 'Ideias práticas para o dia a dia.' },
+  { href: '/comparativo-snacks-proteicos-brasil', title: 'Comparativo de snacks proteicos', desc: 'Crispy Wise vs. o mercado brasileiro.' },
+  { href: '/crispy-wise-funciona', title: 'Crispy Wise funciona?', desc: 'Análise honesta com avaliações verificadas.' },
+  { href: '/avaliacoes', title: 'Avaliações verificadas', desc: '+280 reviews reais organizados por sabor.' },
+]
 
 // ─── PRODUCTS, COMPARISON, STORE imported from @/lib/products above ──────────
 
@@ -166,15 +184,11 @@ function buildSchema(faqs: FaqItem[]) {
   }
 }
 
-function JsonLdInjector({ faqs }: { faqs: FaqItem[] }) {
-  useEffect(() => {
-    const el = document.createElement('script')
-    el.type = 'application/ld+json'
-    el.textContent = JSON.stringify(buildSchema(faqs))
-    document.head.appendChild(el)
-    return () => { document.head.removeChild(el) }
-  }, [faqs])
-  return null
+// JSON-LD renderizado no servidor (aparece no HTML inicial, sem depender de JS).
+// Crítico p/ AEO: crawlers de IA não executam JS. Escapamos "<" p/ evitar breakout de </script>.
+function JsonLd({ faqs }: { faqs: FaqItem[] }) {
+  const json = JSON.stringify(buildSchema(faqs)).replace(/</g, '\\u003c')
+  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: json }} />
 }
 
 // ─── micro components ─────────────────────────────────────────────────────────
@@ -331,7 +345,7 @@ export default function HomeClient({ hero, faqs }: { hero: HeroData; faqs: FaqIt
 
   return (
     <>
-      <JsonLdInjector faqs={faqs} />
+      <JsonLd faqs={faqs} />
 
       {/* Announcement bar */}
       <div className="bg-[#1A0A00] text-white text-center text-xs md:text-sm py-2 px-4 font-medium">
@@ -359,6 +373,7 @@ export default function HomeClient({ hero, faqs }: { hero: HeroData; faqs: FaqIt
             <a href="#produtos" className="hover:text-dark transition-colors">Produtos</a>
             <a href="#comparativo" className="hover:text-dark transition-colors">Comparativo</a>
             <a href="#como-usar" className="hover:text-dark transition-colors">Como usar</a>
+            <a href="#guias" className="hover:text-dark transition-colors">Guias</a>
             <a href="#faq" className="hover:text-dark transition-colors">FAQ</a>
           </nav>
           <CTAButton
@@ -372,46 +387,98 @@ export default function HomeClient({ hero, faqs }: { hero: HeroData; faqs: FaqIt
 
       <main>
         {/* ── Hero ──────────────────────────────────────────────────── */}
-        <section className="bg-gradient-to-br from-[#1A0A00] to-[#3B1F0A] text-white pt-16 pb-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-[#E8732A] font-semibold text-sm uppercase tracking-wider mb-4">
-              Guia Definitivo · Atualizado semanalmente
-            </p>
-            <h1 className="text-3xl md:text-5xl font-black leading-tight mb-6">
-              {hero.headline}
-            </h1>
-            <p className="text-[#D4B8A0] text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-8">
-              {hero.subtitle}
-            </p>
+        <section className="relative overflow-hidden bg-gradient-to-br from-[#1A0A00] to-[#3B1F0A] text-white pt-14 md:pt-16 pb-16 md:pb-20 px-4">
+          {/* glow decorativo */}
+          <div className="pointer-events-none absolute -top-24 -right-24 w-[28rem] h-[28rem] rounded-full bg-[#E8732A]/20 blur-3xl" />
+          <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-12 items-center">
+            {/* Coluna de texto */}
+            <div className="text-center md:text-left">
+              <p className="text-[#E8732A] font-semibold text-sm uppercase tracking-wider mb-4">
+                Guia Definitivo · Atualizado semanalmente
+              </p>
+              <h1 className="text-3xl md:text-5xl font-black leading-tight mb-6">
+                {hero.headline}
+              </h1>
+              <p className="text-[#D4B8A0] text-lg md:text-xl leading-relaxed max-w-2xl mx-auto md:mx-0 mb-8">
+                {hero.subtitle}
+              </p>
 
-            <div className="flex flex-wrap justify-center gap-3 mb-10">
-              {[
-                '12–18g proteína / porção',
-                'Vegano (4 sabores)',
-                'Zero Lactose',
-                'Sem Glúten',
-                'Clean Label',
-                '5+ Sabores',
-              ].map(t => (
-                <span key={t} className="bg-white/10 border border-white/20 text-white text-sm font-medium px-3 py-1 rounded-full">
-                  {t}
-                </span>
-              ))}
+              <div className="flex flex-wrap justify-center md:justify-start gap-3 mb-10">
+                {[
+                  '12–18g proteína / porção',
+                  'Vegano (4 sabores)',
+                  'Zero Lactose',
+                  'Sem Glúten',
+                  'Clean Label',
+                  '5+ Sabores',
+                ].map(t => (
+                  <span key={t} className="bg-white/10 border border-white/20 text-white text-sm font-medium px-3 py-1 rounded-full">
+                    {t}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <CTAButton
+                  href="#produtos"
+                  className="px-8 py-4 text-base bg-[#E83C14] text-white"
+                >
+                  {hero.cta_primary}
+                </CTAButton>
+                <CTAButton
+                  href={`${STORE}/kit-degustacao-crispy-wise/`}
+                  className="px-8 py-4 text-base bg-white/10 border border-white/30 text-white hover:bg-white/20"
+                >
+                  {hero.cta_kit}
+                </CTAButton>
+              </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <CTAButton
-                href="#produtos"
-                className="px-8 py-4 text-base bg-[#E83C14] text-white"
-              >
-                {hero.cta_primary}
-              </CTAButton>
-              <CTAButton
-                href={`${STORE}/kit-degustacao-crispy-wise/`}
-                className="px-8 py-4 text-base bg-white/10 border border-white/30 text-white hover:bg-white/20"
-              >
-                {hero.cta_kit}
-              </CTAButton>
+            {/* Coluna de imagem */}
+            <div className="flex flex-col items-center md:items-end gap-5 order-first md:order-last">
+              <div className="relative">
+                <div className="absolute inset-0 -m-6 rounded-full bg-[#E8732A]/15 blur-2xl" />
+                <Image
+                  src="https://wisehealth.com.br/wp-content/uploads/2025/08/Choco-Crispy-Wise-Fruta-700x700.jpg"
+                  alt="Crispy Wise — snack proteico com 12 a 18g de proteína por porção, vegano e sem lactose"
+                  width={440}
+                  height={440}
+                  priority
+                  sizes="(max-width: 768px) 75vw, 440px"
+                  className="relative w-60 sm:w-72 md:w-full max-w-[440px] h-auto rounded-3xl shadow-2xl ring-1 ring-white/10"
+                />
+                <div className="absolute -bottom-4 -left-4 bg-white text-[#1A0A00] rounded-2xl px-4 py-2 shadow-xl hidden sm:block">
+                  <span className="block text-2xl font-black text-[#C05C14] leading-none">18g</span>
+                  <span className="block text-[11px] font-semibold text-[#7A5C46] mt-0.5">proteína / porção</span>
+                </div>
+              </div>
+
+              {/* Miniaturas dos sabores (link interno p/ as fichas) */}
+              <div className="w-full max-w-[440px]">
+                <p className="text-center md:text-right text-xs text-[#A0826A] mb-2 uppercase tracking-wider">
+                  {PRODUCTS.length} sabores
+                </p>
+                <div className="flex gap-2 sm:gap-2.5 justify-center md:justify-end flex-wrap">
+                  {PRODUCTS.map(p => (
+                    <a
+                      key={p.id}
+                      href={`/${p.slug}`}
+                      title={p.name}
+                      aria-label={p.name}
+                      className="bg-white/95 rounded-xl p-1.5 ring-1 ring-white/10 hover:ring-[#E8732A] hover:-translate-y-0.5 transition-all"
+                    >
+                      <img
+                        src={p.img}
+                        alt={`${p.name} — ${p.subtitle}`}
+                        width={48}
+                        height={48}
+                        loading="lazy"
+                        className="w-11 h-11 sm:w-12 sm:h-12 object-contain"
+                      />
+                    </a>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -724,6 +791,35 @@ export default function HomeClient({ hero, faqs }: { hero: HeroData; faqs: FaqIt
           </div>
         </section>
 
+        {/* ── Guias e artigos (link interno p/ todo o conteúdo) ─────── */}
+        <section id="guias" className="py-16 px-4 bg-[#FFF8F0]">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-2xl md:text-4xl font-black text-dark mb-3">
+                Guias sobre <span className="text-[#C05C14]">snacks proteicos</span>
+              </h2>
+              <p className="text-[#7A5C46] text-lg max-w-xl mx-auto">
+                Tudo o que você precisa saber para escolher, comparar e usar snacks proteicos no dia a dia.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {GUIDES.map(g => (
+                <a
+                  key={g.href}
+                  href={g.href}
+                  className="group bg-white rounded-xl border border-[#E8D5C4] p-5 hover:border-[#C05C14] hover:shadow-sm transition-all flex flex-col gap-1"
+                >
+                  <h3 className="font-bold text-dark text-sm group-hover:text-[#C05C14] transition-colors">
+                    {g.title} →
+                  </h3>
+                  <p className="text-xs text-[#7A5C46] leading-relaxed">{g.desc}</p>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* ── Final CTA ─────────────────────────────────────────────── */}
         <section className="py-16 px-4 bg-gradient-to-br from-[#C05C14] to-[#E8732A] text-white">
           <div className="max-w-3xl mx-auto text-center">
@@ -799,13 +895,11 @@ export default function HomeClient({ hero, faqs }: { hero: HeroData; faqs: FaqIt
             <div>
               <h3 className="font-semibold text-white mb-3">Guias</h3>
               <ul className="text-sm flex flex-col gap-1.5">
-                <li><a href="#produtos" className="hover:text-white transition-colors">Todos os produtos</a></li>
-                <li><a href="#comparativo" className="hover:text-white transition-colors">Comparativo</a></li>
-                <li><a href="/avaliacoes" className="hover:text-white transition-colors">Avaliações verificadas</a></li>
-                <li><a href="/comparativo-snacks-proteicos-brasil" className="hover:text-white transition-colors">Snacks proteicos no Brasil</a></li>
-                <li><a href="/snack-proteico-vegano" className="hover:text-white transition-colors">Snack proteico vegano</a></li>
-                <li><a href="/snack-proteico-sem-gluten" className="hover:text-white transition-colors">Snack proteico sem glúten</a></li>
-                <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
+                {GUIDES.map(g => (
+                  <li key={g.href}>
+                    <a href={g.href} className="hover:text-white transition-colors">{g.title}</a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div>

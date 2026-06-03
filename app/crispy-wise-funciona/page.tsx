@@ -53,6 +53,7 @@ export default function CrispyWiseFunciona() {
         headline: 'Crispy Wise Funciona? Análise Completa 2026',
         description: 'Análise honesta do Crispy Wise com avaliações verificadas, ingredientes e comparativo de preço.',
         url: 'https://snackproteico.com.br/crispy-wise-funciona',
+        author: { '@type': 'Organization', name: 'WiseHealth Nutrition', url: 'https://wisehealth.com.br' },
         publisher: { '@type': 'Organization', name: 'snackproteico.com.br', url: 'https://snackproteico.com.br' },
         datePublished: '2026-05-27',
         dateModified: new Date().toISOString().split('T')[0],
