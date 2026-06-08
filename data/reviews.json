@@ -1,8 +1,8 @@
 {
-  "lastFetched": "2026-06-01T21:08:15.297Z",
+  "lastFetched": "2026-06-08T18:08:16.762Z",
   "aggregate": {
     "rating": 4.8,
-    "count": 300,
+    "count": 310,
     "recommended": 98
   },
   "byProduct": [
@@ -11,7 +11,7 @@
       "product": "Crispy Wise Whey",
       "flavor": "Neutro",
       "rating": 4.8,
-      "count": 166,
+      "count": 168,
       "recommended": 98
     },
     {
@@ -19,15 +19,15 @@
       "product": "Choco Crispy Wise",
       "flavor": "Chocolate",
       "rating": 4.8,
-      "count": 85,
-      "recommended": 96
+      "count": 89,
+      "recommended": 97
     },
     {
       "sku": "082",
       "product": "Crispy Wise Caramel",
       "flavor": "Caramelo",
       "rating": 4.9,
-      "count": 49,
+      "count": 53,
       "recommended": 100
     }
   ],
@@ -245,6 +245,20 @@
       "source": "wisehealth"
     },
     {
+      "id": "6a1f8458ed22a1490bab9762",
+      "sku": "082",
+      "product": "Crispy Wise Caramel",
+      "flavor": "Caramelo",
+      "name": "Maria N.",
+      "rating": 5,
+      "text": "Delicioso! Muito bom com frutas e yogurte! O de Caramelo é bem mais soltinho que o de Chocolate. Adorei!",
+      "date": "2026-06-03",
+      "verified": true,
+      "hasPicture": false,
+      "pictureUrl": null,
+      "source": "wisehealth"
+    },
+    {
       "id": "690e0c6f306db948edb76223",
       "sku": "068",
       "product": "Crispy Wise Whey",
@@ -385,6 +399,20 @@
       "source": "wisehealth"
     },
     {
+      "id": "6a255c16fad2b17e5a0ca694",
+      "sku": "078",
+      "product": "Choco Crispy Wise",
+      "flavor": "Chocolate",
+      "name": "Ana P.",
+      "rating": 5,
+      "text": "Produto delicioso, crocante. Superou muito as expectativas.",
+      "date": "2026-06-07",
+      "verified": true,
+      "hasPicture": false,
+      "pictureUrl": null,
+      "source": "wisehealth"
+    },
+    {
       "id": "69d9547ee9f633b627b1bb95",
       "sku": "068",
       "product": "Crispy Wise Whey",
@@ -427,6 +455,20 @@
       "source": "wisehealth"
     },
     {
+      "id": "6a1d6d36f78d2fad9b2f8535",
+      "sku": "068",
+      "product": "Crispy Wise Whey",
+      "flavor": "Neutro",
+      "name": "roberto s.",
+      "rating": 5,
+      "text": "Apenas gostaria que tivesse embalagens maiores.",
+      "date": "2026-06-01",
+      "verified": true,
+      "hasPicture": false,
+      "pictureUrl": null,
+      "source": "wisehealth"
+    },
+    {
       "id": "69ef352419267b6e754cb4ae",
       "sku": "078",
       "product": "Choco Crispy Wise",
@@ -463,6 +505,20 @@
       "rating": 5,
       "text": "Eu como o crispie com iogurte e dá saciedade.",
       "date": "2026-05-21",
+      "verified": true,
+      "hasPicture": false,
+      "pictureUrl": null,
+      "source": "wisehealth"
+    },
+    {
+      "id": "6a1f8238ed22a1490ba94576",
+      "sku": "078",
+      "product": "Choco Crispy Wise",
+      "flavor": "Chocolate",
+      "name": "Maria N.",
+      "rating": 5,
+      "text": "Delicioso para acompanhar frutas e yogurtes.",
+      "date": "2026-06-03",
       "verified": true,
       "hasPicture": false,
       "pictureUrl": null,
@@ -637,6 +693,20 @@
       "source": "wisehealth"
     },
     {
+      "id": "6a2094e772e5f41d1c13fb0c",
+      "sku": "078",
+      "product": "Choco Crispy Wise",
+      "flavor": "Chocolate",
+      "name": "gabriela y.",
+      "rating": 5,
+      "text": "Uma delícia! Bem crocante",
+      "date": "2026-06-03",
+      "verified": true,
+      "hasPicture": false,
+      "pictureUrl": null,
+      "source": "wisehealth"
+    },
+    {
       "id": "6a0eb29a10a1e3b79bb3ba3f",
       "sku": "068",
       "product": "Crispy Wise Whey",
@@ -659,20 +729,6 @@
       "rating": 5,
       "text": "Adorei! Sabor ótimo!",
       "date": "2026-04-22",
-      "verified": true,
-      "hasPicture": false,
-      "pictureUrl": null,
-      "source": "wisehealth"
-    },
-    {
-      "id": "69aae868c713462f3f9cd726",
-      "sku": "078",
-      "product": "Choco Crispy Wise",
-      "flavor": "Chocolate",
-      "name": "Flávia B.",
-      "rating": 5,
-      "text": "Já comprei novamente",
-      "date": "2026-03-06",
       "verified": true,
       "hasPicture": false,
       "pictureUrl": null,
