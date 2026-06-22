@@ -1,8 +1,8 @@
 {
-  "lastFetched": "2026-06-15T20:18:03.163Z",
+  "lastFetched": "2026-06-22T12:44:33.818Z",
   "aggregate": {
     "rating": 4.8,
-    "count": 312,
+    "count": 313,
     "recommended": 98
   },
   "byProduct": [
@@ -27,7 +27,7 @@
       "product": "Crispy Wise Caramel",
       "flavor": "Caramelo",
       "rating": 4.9,
-      "count": 53,
+      "count": 54,
       "recommended": 100
     }
   ],
@@ -295,20 +295,6 @@
       "rating": 5,
       "text": "Delicioso da vontade comer igual pipoca, super crocante. \nótimo p iogurte, mingau \nPerfeito.",
       "date": "2025-12-28",
-      "verified": true,
-      "hasPicture": false,
-      "pictureUrl": null,
-      "source": "wisehealth"
-    },
-    {
-      "id": "69b80b9ac56a2af02db84d0f",
-      "sku": "082",
-      "product": "Crispy Wise Caramel",
-      "flavor": "Caramelo",
-      "name": "Céres R.",
-      "rating": 5,
-      "text": "Esse crispy é  a soluçao para quem não consegue consumir whey. E ele éuma delícia. Amoooo",
-      "date": "2026-03-16",
       "verified": true,
       "hasPicture": false,
       "pictureUrl": null,
@@ -673,6 +659,20 @@
       "rating": 5,
       "text": "Uma delícia! Bem crocante",
       "date": "2026-06-03",
+      "verified": true,
+      "hasPicture": false,
+      "pictureUrl": null,
+      "source": "wisehealth"
+    },
+    {
+      "id": "6a343a0e1e4202928b1fbd57",
+      "sku": "082",
+      "product": "Crispy Wise Caramel",
+      "flavor": "Caramelo",
+      "name": "Renata D.",
+      "rating": 5,
+      "text": "Simplesmente o melhor",
+      "date": "2026-06-18",
       "verified": true,
       "hasPicture": false,
       "pictureUrl": null,
