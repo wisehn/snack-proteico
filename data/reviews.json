@@ -1,8 +1,8 @@
 {
-  "lastFetched": "2026-06-22T12:44:33.818Z",
+  "lastFetched": "2026-06-29T11:53:40.723Z",
   "aggregate": {
     "rating": 4.8,
-    "count": 313,
+    "count": 315,
     "recommended": 98
   },
   "byProduct": [
@@ -19,7 +19,7 @@
       "product": "Choco Crispy Wise",
       "flavor": "Chocolate",
       "rating": 4.8,
-      "count": 90,
+      "count": 92,
       "recommended": 97
     },
     {
@@ -75,17 +75,17 @@
       "source": "wisehealth"
     },
     {
-      "id": "690e0c51f5966e0f4195be68",
-      "sku": "068",
-      "product": "Crispy Wise Whey",
-      "flavor": "Neutro",
-      "name": "Adriana Q.",
+      "id": "6a424122212a0ddf969f46c7",
+      "sku": "078",
+      "product": "Choco Crispy Wise",
+      "flavor": "Chocolate",
+      "name": "Sandra F.",
       "rating": 5,
-      "text": "Estou viciada no Crisp, é muito crocante e macio ao mesmo tempo. Coloco no iogurte com whey e frutas e tbm na banana com aveia de manhã. Sem condições de ficar sem.",
-      "date": "2025-03-27",
+      "text": "Adoro o saber e a consistência \nPrático para bater meta proteica\nSó k preço que não é muito bom e a taxa de entrega que sempre é cobrda independente do valor da compra.",
+      "date": "2026-06-29",
       "verified": true,
-      "hasPicture": true,
-      "pictureUrl": "https://uploads.konfidency.com.br/thumbs/imported-wisehealth-690e0c51f5966e0f4195be68-0",
+      "hasPicture": false,
+      "pictureUrl": null,
       "source": "wisehealth"
     }
   ],
@@ -127,6 +127,20 @@
       "rating": 5,
       "text": "Uma delícia, só assim pra eu consumir whey. Ele parece um cereal de chocolate, não tem retrogosto nenhum, com iogurte grego e morango picado fica perfeito! Comprei sachê pra provar mas ja vou providenciar o pacote grande (alô wise faz umas promos aí)",
       "date": "2026-05-21",
+      "verified": true,
+      "hasPicture": false,
+      "pictureUrl": null,
+      "source": "wisehealth"
+    },
+    {
+      "id": "6a424122212a0ddf969f46c7",
+      "sku": "078",
+      "product": "Choco Crispy Wise",
+      "flavor": "Chocolate",
+      "name": "Sandra F.",
+      "rating": 5,
+      "text": "Adoro o saber e a consistência \nPrático para bater meta proteica\nSó k preço que não é muito bom e a taxa de entrega que sempre é cobrda independente do valor da compra.",
+      "date": "2026-06-29",
       "verified": true,
       "hasPicture": false,
       "pictureUrl": null,
@@ -729,20 +743,6 @@
       "rating": 5,
       "text": "Ótimo \nRecomendo",
       "date": "2026-04-02",
-      "verified": true,
-      "hasPicture": false,
-      "pictureUrl": null,
-      "source": "wisehealth"
-    },
-    {
-      "id": "6a2defb2d33d337c09fe168c",
-      "sku": "078",
-      "product": "Choco Crispy Wise",
-      "flavor": "Chocolate",
-      "name": "Mayara A.",
-      "rating": 5,
-      "text": "O sabor é ótimo",
-      "date": "2026-06-14",
       "verified": true,
       "hasPicture": false,
       "pictureUrl": null,
