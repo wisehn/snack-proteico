@@ -1,8 +1,8 @@
 {
-  "lastFetched": "2026-07-06T11:23:28.251Z",
+  "lastFetched": "2026-07-13T10:17:13.645Z",
   "aggregate": {
     "rating": 4.8,
-    "count": 315,
+    "count": 317,
     "recommended": 98
   },
   "byProduct": [
@@ -18,8 +18,8 @@
       "sku": "078",
       "product": "Choco Crispy Wise",
       "flavor": "Chocolate",
-      "rating": 4.8,
-      "count": 92,
+      "rating": 4.9,
+      "count": 94,
       "recommended": 97
     },
     {
@@ -497,6 +497,20 @@
       "source": "wisehealth"
     },
     {
+      "id": "6a54109f894b9b2dbf5607d7",
+      "sku": "078",
+      "product": "Choco Crispy Wise",
+      "flavor": "Chocolate",
+      "name": "Sandra F.",
+      "rating": 5,
+      "text": "Delicioso e ajuda a bater s meta de proteína",
+      "date": "2026-07-12",
+      "verified": true,
+      "hasPicture": false,
+      "pictureUrl": null,
+      "source": "wisehealth"
+    },
+    {
       "id": "6a1f8238ed22a1490ba94576",
       "sku": "078",
       "product": "Choco Crispy Wise",
@@ -575,20 +589,6 @@
       "rating": 5,
       "text": "Muito bom, super crocante. Recomendo",
       "date": "2026-04-16",
-      "verified": true,
-      "hasPicture": false,
-      "pictureUrl": null,
-      "source": "wisehealth"
-    },
-    {
-      "id": "69c57152d5e517edd3013832",
-      "sku": "078",
-      "product": "Choco Crispy Wise",
-      "flavor": "Chocolate",
-      "name": "Bianca T.",
-      "rating": 5,
-      "text": "super prático para os dias corridos.",
-      "date": "2026-03-26",
       "verified": true,
       "hasPicture": false,
       "pictureUrl": null,
