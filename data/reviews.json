@@ -1,8 +1,8 @@
 {
-  "lastFetched": "2026-07-13T10:17:13.645Z",
+  "lastFetched": "2026-07-20T09:51:37.731Z",
   "aggregate": {
     "rating": 4.8,
-    "count": 317,
+    "count": 318,
     "recommended": 98
   },
   "byProduct": [
@@ -18,8 +18,8 @@
       "sku": "078",
       "product": "Choco Crispy Wise",
       "flavor": "Chocolate",
-      "rating": 4.9,
-      "count": 94,
+      "rating": 4.8,
+      "count": 95,
       "recommended": 97
     },
     {
@@ -735,14 +735,14 @@
       "source": "wisehealth"
     },
     {
-      "id": "69cdbd6c7174265c7ec2a870",
+      "id": "6a54fb32582e60b22d439f39",
       "sku": "078",
       "product": "Choco Crispy Wise",
       "flavor": "Chocolate",
-      "name": "Dayse C.",
-      "rating": 5,
-      "text": "Ótimo \nRecomendo",
-      "date": "2026-04-02",
+      "name": "Natália S.",
+      "rating": 4,
+      "text": "Não gostei muito do gosto dele puro, mas pra misturar com outras coisas fica bem agradável, como num iogurte, bolinho, etc.",
+      "date": "2026-07-13",
       "verified": true,
       "hasPicture": false,
       "pictureUrl": null,
