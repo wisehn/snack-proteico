@@ -1,8 +1,8 @@
 {
-  "lastFetched": "2026-08-03T10:33:53.397Z",
+  "lastFetched": "2026-08-10T08:21:56.673Z",
   "aggregate": {
     "rating": 4.8,
-    "count": 318,
+    "count": 320,
     "recommended": 98
   },
   "byProduct": [
@@ -19,7 +19,7 @@
       "product": "Choco Crispy Wise",
       "flavor": "Chocolate",
       "rating": 4.8,
-      "count": 95,
+      "count": 96,
       "recommended": 97
     },
     {
@@ -27,7 +27,7 @@
       "product": "Crispy Wise Caramel",
       "flavor": "Caramelo",
       "rating": 4.9,
-      "count": 54,
+      "count": 55,
       "recommended": 100
     }
   ],
@@ -679,6 +679,20 @@
       "source": "wisehealth"
     },
     {
+      "id": "6a791384b82e88446022f278",
+      "sku": "082",
+      "product": "Crispy Wise Caramel",
+      "flavor": "Caramelo",
+      "name": "Maria N.",
+      "rating": 5,
+      "text": "É delicioso 😋 adorei!!",
+      "date": "2026-08-09",
+      "verified": true,
+      "hasPicture": false,
+      "pictureUrl": null,
+      "source": "wisehealth"
+    },
+    {
       "id": "6a343a0e1e4202928b1fbd57",
       "sku": "082",
       "product": "Crispy Wise Caramel",
@@ -763,20 +777,6 @@
       "source": "wisehealth"
     },
     {
-      "id": "69d3a8add37941bba810a674",
-      "sku": "078",
-      "product": "Choco Crispy Wise",
-      "flavor": "Chocolate",
-      "name": "Julia L.",
-      "rating": 4,
-      "text": "Gostei do sabor e da textura, ótimo para acrescentar em receitas.",
-      "date": "2026-04-06",
-      "verified": true,
-      "hasPicture": false,
-      "pictureUrl": null,
-      "source": "wisehealth"
-    },
-    {
       "id": "69d3a8bbd37941bba810b1b6",
       "sku": "082",
       "product": "Crispy Wise Caramel",
@@ -785,20 +785,6 @@
       "rating": 4,
       "text": "Gostei do sabor e da textura, ótimo para acrescentar em receitas.",
       "date": "2026-04-06",
-      "verified": true,
-      "hasPicture": false,
-      "pictureUrl": null,
-      "source": "wisehealth"
-    },
-    {
-      "id": "69c42a1fd5e517edd312a821",
-      "sku": "082",
-      "product": "Crispy Wise Caramel",
-      "flavor": "Caramelo",
-      "name": "dana s.",
-      "rating": 4,
-      "text": "De todos e o melhor que o que mais gostoso fica",
-      "date": "2026-03-25",
       "verified": true,
       "hasPicture": false,
       "pictureUrl": null,
