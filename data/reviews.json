@@ -1,8 +1,8 @@
 {
-  "lastFetched": "2026-08-24T07:51:20.381Z",
+  "lastFetched": "2026-08-31T14:39:58.658Z",
   "aggregate": {
     "rating": 4.8,
-    "count": 320,
+    "count": 321,
     "recommended": 98
   },
   "byProduct": [
@@ -27,7 +27,7 @@
       "product": "Crispy Wise Caramel",
       "flavor": "Caramelo",
       "rating": 4.9,
-      "count": 55,
+      "count": 56,
       "recommended": 100
     }
   ],
