@@ -1,8 +1,8 @@
 {
-  "lastFetched": "2026-09-07T13:10:59.185Z",
+  "lastFetched": "2026-09-14T13:31:25.349Z",
   "aggregate": {
     "rating": 4.8,
-    "count": 321,
+    "count": 329,
     "recommended": 98
   },
   "byProduct": [
@@ -11,23 +11,23 @@
       "product": "Crispy Wise Whey",
       "flavor": "Neutro",
       "rating": 4.8,
-      "count": 169,
+      "count": 171,
       "recommended": 98
     },
     {
       "sku": "078",
       "product": "Choco Crispy Wise",
       "flavor": "Chocolate",
-      "rating": 4.8,
-      "count": 96,
-      "recommended": 97
+      "rating": 4.9,
+      "count": 100,
+      "recommended": 96
     },
     {
       "sku": "082",
       "product": "Crispy Wise Caramel",
       "flavor": "Caramelo",
       "rating": 4.9,
-      "count": 56,
+      "count": 58,
       "recommended": 100
     }
   ],
@@ -217,20 +217,6 @@
       "source": "wisehealth"
     },
     {
-      "id": "69d402e282de6cf014a1e663",
-      "sku": "068",
-      "product": "Crispy Wise Whey",
-      "flavor": "Neutro",
-      "name": "Renata S.",
-      "rating": 5,
-      "text": "Não tem gosto de nada, então é uma boa opção pra suplementar proteína. Bem crocante, parece flocos de arroz.",
-      "date": "2026-04-06",
-      "verified": true,
-      "hasPicture": false,
-      "pictureUrl": null,
-      "source": "wisehealth"
-    },
-    {
       "id": "69c92086d7b69451d7f72f43",
       "sku": "082",
       "product": "Crispy Wise Caramel",
@@ -371,6 +357,20 @@
       "source": "wisehealth"
     },
     {
+      "id": "6a22d29772e5f41d1cfde8f1",
+      "sku": "078",
+      "product": "Choco Crispy Wise",
+      "flavor": "Chocolate",
+      "name": "Erika O.",
+      "rating": 5,
+      "text": "Meu filho não gostou, mas o nutricionista disse que é ótima qualidade.",
+      "date": "2026-06-05",
+      "verified": true,
+      "hasPicture": false,
+      "pictureUrl": null,
+      "source": "wisehealth"
+    },
+    {
       "id": "6a064043ba8f70937636d262",
       "sku": "078",
       "product": "Choco Crispy Wise",
@@ -396,6 +396,20 @@
       "verified": true,
       "hasPicture": true,
       "pictureUrl": "https://uploads.konfidency.com.br/thumbs/2f73e6f7-e5f1-451f-8b4a-121df6dbd1cb",
+      "source": "wisehealth"
+    },
+    {
+      "id": "6a6a42ae99bd918e3a0649fa",
+      "sku": "078",
+      "product": "Choco Crispy Wise",
+      "flavor": "Chocolate",
+      "name": "Sandra F.",
+      "rating": 5,
+      "text": "Poderia conter 1 scoop de plástico na embalagem para facilitar.",
+      "date": "2026-07-29",
+      "verified": true,
+      "hasPicture": false,
+      "pictureUrl": null,
       "source": "wisehealth"
     },
     {
@@ -595,6 +609,20 @@
       "source": "wisehealth"
     },
     {
+      "id": "6a9058e9d58601d8d39658a9",
+      "sku": "078",
+      "product": "Choco Crispy Wise",
+      "flavor": "Chocolate",
+      "name": "Sandra F.",
+      "rating": 5,
+      "text": "Saboroso. Só falta vir bom um scoop",
+      "date": "2026-08-27",
+      "verified": true,
+      "hasPicture": false,
+      "pictureUrl": null,
+      "source": "wisehealth"
+    },
+    {
       "id": "69eccbaf19267b6e7591721c",
       "sku": "082",
       "product": "Crispy Wise Caramel",
@@ -603,20 +631,6 @@
       "rating": 5,
       "text": "Apaixonada pelo sabor e crocancia",
       "date": "2026-04-25",
-      "verified": true,
-      "hasPicture": false,
-      "pictureUrl": null,
-      "source": "wisehealth"
-    },
-    {
-      "id": "69d43017c3332cc556ca5cae",
-      "sku": "078",
-      "product": "Choco Crispy Wise",
-      "flavor": "Chocolate",
-      "name": "Roberta B.",
-      "rating": 5,
-      "text": "Muito saboroso e super crocante!",
-      "date": "2026-04-06",
       "verified": true,
       "hasPicture": false,
       "pictureUrl": null,
@@ -648,20 +662,6 @@
       "verified": true,
       "hasPicture": true,
       "pictureUrl": "https://uploads.konfidency.com.br/thumbs/9ba14435-1469-472d-8cbc-cb1e981f74a0",
-      "source": "wisehealth"
-    },
-    {
-      "id": "69d40277c25337f5ef47665d",
-      "sku": "078",
-      "product": "Choco Crispy Wise",
-      "flavor": "Chocolate",
-      "name": "Renata S.",
-      "rating": 5,
-      "text": "Gostoso, mas meio enjoativo.",
-      "date": "2026-04-06",
-      "verified": true,
-      "hasPicture": false,
-      "pictureUrl": null,
       "source": "wisehealth"
     },
     {
@@ -813,6 +813,20 @@
       "rating": 4,
       "text": "Gostoso e prático. Sabor pode melhorar",
       "date": "2026-05-19",
+      "verified": true,
+      "hasPicture": false,
+      "pictureUrl": null,
+      "source": "wisehealth"
+    },
+    {
+      "id": "6a4967a6e8079e7a6273bdbb",
+      "sku": "068",
+      "product": "Crispy Wise Whey",
+      "flavor": "Neutro",
+      "name": "roberto s.",
+      "rating": 4,
+      "text": "A embalagem poderia ser maior.",
+      "date": "2026-07-04",
       "verified": true,
       "hasPicture": false,
       "pictureUrl": null,
