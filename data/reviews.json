@@ -1,8 +1,8 @@
 {
-  "lastFetched": "2026-10-05T15:26:26.236Z",
+  "lastFetched": "2026-10-12T16:21:46.320Z",
   "aggregate": {
     "rating": 4.8,
-    "count": 331,
+    "count": 333,
     "recommended": 98
   },
   "byProduct": [
@@ -19,7 +19,7 @@
       "product": "Choco Crispy Wise",
       "flavor": "Chocolate",
       "rating": 4.9,
-      "count": 100,
+      "count": 101,
       "recommended": 96
     },
     {
@@ -27,7 +27,7 @@
       "product": "Crispy Wise Caramel",
       "flavor": "Caramelo",
       "rating": 4.9,
-      "count": 60,
+      "count": 61,
       "recommended": 100
     }
   ],
