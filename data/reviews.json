@@ -1,8 +1,8 @@
 {
-  "lastFetched": "2026-11-02T16:42:47.831Z",
+  "lastFetched": "2026-11-09T17:00:17.001Z",
   "aggregate": {
     "rating": 4.8,
-    "count": 336,
+    "count": 337,
     "recommended": 98
   },
   "byProduct": [
@@ -11,7 +11,7 @@
       "product": "Crispy Wise Whey",
       "flavor": "Neutro",
       "rating": 4.8,
-      "count": 171,
+      "count": 172,
       "recommended": 98
     },
     {
