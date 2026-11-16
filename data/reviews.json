@@ -1,8 +1,8 @@
 {
-  "lastFetched": "2026-11-09T17:00:17.001Z",
+  "lastFetched": "2026-11-16T16:38:59.388Z",
   "aggregate": {
     "rating": 4.8,
-    "count": 337,
+    "count": 338,
     "recommended": 98
   },
   "byProduct": [
@@ -27,7 +27,7 @@
       "product": "Crispy Wise Caramel",
       "flavor": "Caramelo",
       "rating": 4.9,
-      "count": 63,
+      "count": 64,
       "recommended": 100
     }
   ],
@@ -329,6 +329,20 @@
       "source": "wisehealth"
     },
     {
+      "id": "6acffdefb1a2de3d6bb28934",
+      "sku": "082",
+      "product": "Crispy Wise Caramel",
+      "flavor": "Caramelo",
+      "name": "Pâmela S.",
+      "rating": 5,
+      "text": "É gostoso e ótimo pra bater a meta de proteína. Mas tá cada vez mais caro rs.",
+      "date": "2026-10-14",
+      "verified": true,
+      "hasPicture": false,
+      "pictureUrl": null,
+      "source": "wisehealth"
+    },
+    {
       "id": "690e0c63f5966e0f4195cd61",
       "sku": "068",
       "product": "Crispy Wise Whey",
@@ -340,20 +354,6 @@
       "verified": true,
       "hasPicture": true,
       "pictureUrl": "https://uploads.konfidency.com.br/thumbs/imported-wisehealth-690e0c63f5966e0f4195cd61-0",
-      "source": "wisehealth"
-    },
-    {
-      "id": "69c55a1ed5e517edd3dce682",
-      "sku": "082",
-      "product": "Crispy Wise Caramel",
-      "flavor": "Caramelo",
-      "name": "Francinara M.",
-      "rating": 5,
-      "text": "Combinação deliciosa da proteína com caramelo.\nValeu demaaaiis a compra!!",
-      "date": "2026-03-26",
-      "verified": true,
-      "hasPicture": false,
-      "pictureUrl": null,
       "source": "wisehealth"
     },
     {
