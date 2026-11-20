@@ -1,8 +1,9 @@
 import { Metadata } from 'next'
 import SchemaInjector from '@/app/[product]/SchemaInjector'
+import SnackWiseNote from '@/app/SnackWiseNote'
 
 export const metadata: Metadata = {
-  title: 'Proteína de Ervilha: O que é, benefícios e diferença do Whey | snackproteico.com.br',
+  title: 'Proteína de Ervilha: O que é, benefícios e diferença do Whey',
   description: 'Guia completo sobre proteína de ervilha: valor biológico, perfil de aminoácidos, diferença entre isolado e concentrado, comparação com whey e como usar. Crispy Wise usa isolado de ervilha.',
   alternates: { canonical: 'https://snackproteico.com.br/proteina-de-ervilha' },
   openGraph: {
@@ -285,6 +286,9 @@ export default function ProteinaErvilhaPage() {
             </div>
           </div>
         </section>
+              <SnackWiseNote>
+          A proteína isolada de ervilha também é usada no Snack Wise, salgadinho assado com 12 g de proteína por pacote de 40 g, combinada com farinha de milho e óleo de soja.
+        </SnackWiseNote>
       </main>
 
       <footer className="bg-[#1A0A00] text-[#D4B8A0] py-8 px-4 text-center text-sm">

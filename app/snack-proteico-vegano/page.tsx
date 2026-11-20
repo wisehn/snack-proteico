@@ -3,7 +3,7 @@ import SchemaInjector from '@/app/[product]/SchemaInjector'
 import { PRODUCTS } from '@/lib/products'
 
 export const metadata: Metadata = {
-  title: 'Snack Proteico Vegano: Guia Completo 2026 | snackproteico.com.br',
+  title: 'Snack Proteico Vegano: Guia Completo 2026',
   description: 'Guia completo sobre snacks proteicos veganos no Brasil: fontes de proteína vegetal, o que evitar, como escolher e os melhores produtos disponíveis. Crispy Wise: 18g de ervilha isolada.',
   alternates: { canonical: 'https://snackproteico.com.br/snack-proteico-vegano' },
   openGraph: {

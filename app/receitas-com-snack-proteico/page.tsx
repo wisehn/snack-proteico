@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import SchemaInjector from '@/app/[product]/SchemaInjector'
 
 export const metadata: Metadata = {
-  title: 'Receitas com Snack Proteico: 8 Formas de Usar o Crispy Wise | snackproteico.com.br',
+  title: 'Receitas com Snack Proteico: 8 Formas de Usar o Crispy Wise',
   description: '8 receitas práticas com snack proteico: topping de açaí, parfait de iogurte, overnight oats, salada com crouton proteico e mais. Crispy Wise: crocante, neutro, 12–18g de proteína.',
   alternates: { canonical: 'https://snackproteico.com.br/receitas-com-snack-proteico' },
   openGraph: {

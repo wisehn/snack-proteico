@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import SchemaInjector from '@/app/[product]/SchemaInjector'
 
 export const metadata: Metadata = {
-  title: 'Quantas Gramas de Proteína por Dia? Calculadora por Peso e Objetivo | snackproteico.com.br',
+  title: 'Quantas Gramas de Proteína por Dia? Calculadora por Peso e Objetivo',
   description: 'Quanto de proteína você precisa por dia? Recomendações por peso, objetivo (hipertrofia, emagrecimento, manutenção) e como snacks proteicos ajudam a atingir a meta diária.',
   alternates: { canonical: 'https://snackproteico.com.br/quantas-gramas-proteina-por-dia' },
   openGraph: {

@@ -3,7 +3,7 @@ import SchemaInjector from '@/app/[product]/SchemaInjector'
 import { PRODUCTS } from '@/lib/products'
 
 export const metadata: Metadata = {
-  title: 'Snack Proteico Sem Lactose: Guia Completo 2026 | snackproteico.com.br',
+  title: 'Snack Proteico Sem Lactose: Guia Completo 2026',
   description: 'Guia completo sobre snacks proteicos zero lactose no Brasil: por que a maioria contém lactose, como identificar, e as melhores opções. Crispy Wise: 5 de 6 sabores zero lactose.',
   alternates: { canonical: 'https://snackproteico.com.br/snack-proteico-sem-lactose' },
   openGraph: {

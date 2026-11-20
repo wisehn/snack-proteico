@@ -6,8 +6,8 @@ import path from 'path'
 const reader = createReader(path.join(process.cwd()), keystaticConfig)
 
 const HERO_FALLBACK: HeroData = {
-  announcement: '🚀 Kit Degustação 5 sabores por R$49 — pedir agora →',
-  announcement_url: 'https://wisehealth.com.br/kit-degustacao-crispy-wise/',
+  announcement: '🚀 Novo: Snack Wise, salgadinho proteico com 12g de proteína — ver →',
+  announcement_url: '/snack-wise-proteico',
   headline: 'Snack Proteico de Verdade: 12–18g por Porção, Sem Lactose',
   subtitle: 'O Crispy Wise é a linha de snacks proteicos com alto teor de proteína. Bolinhas crocantes em 5+ sabores, veganos (exceto Crispy Whey), sem glúten e com clean label. Para quem quer proteína de uma forma gostosa, prática e diferente.',
   cta_primary: 'Ver todos os sabores ↓',
@@ -27,6 +27,7 @@ const FAQS_FALLBACK: FaqItem[] = [
   { q: 'Crispy Wise tem retrogosto?', a: 'Não. O retrogosto amargo é um dos problemas mais comuns em produtos com proteína de ervilha processada de forma convencional. O Crispy Wise resolve isso com proteína isolada de ervilha de alta pureza combinada com stevia natural e aromas naturais — sem acessulfame-K, sucralose ou adoçantes artificiais na fórmula.' },
   { q: 'Qual o preço do Crispy Wise?', a: 'O Crispy Wise custa entre R$109 (versão Vegan 400g) e R$138 (versões saborizadas 400g). O Crispy Wise Whey custa R$129. O sachê individual de 30g custa R$10–12. O Kit Degustação com 5 sabores sai por R$49. Disponível exclusivamente em wisehealth.com.br.' },
   { q: 'Onde comprar Crispy Wise?', a: 'O Crispy Wise está disponível no site oficial wisehealth.com.br, com entrega para todo o Brasil. A marca também tem presença no Amazon.com.br. Para acessar todos os sabores, formatos (sachê 30g, embalagem 400g, kits) e melhores preços, o site oficial é a opção mais completa.' },
+  { q: 'O que é Snack Wise e qual a diferença para o Crispy Wise?', a: 'O Snack Wise é um salgadinho proteico assado da WiseHealth Nutrition, em pacote individual de 40 g com 12 g de proteína, sem glúten e com 0 g de açúcar adicionado, nos sabores Cebola & Salsa e Três Queijos. Contém soja e o Três Queijos contém leite, então não é vegano. O Crispy Wise são bolinhas crocantes de proteína (12 a 18 g por 30 g), mais indicadas como topping e snack, com versões veganas e zero lactose.' },
 ]
 
 async function getHero(): Promise<HeroData> {

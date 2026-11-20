@@ -3,7 +3,7 @@ import SchemaInjector from '@/app/[product]/SchemaInjector'
 import reviewsData from '@/data/reviews.json'
 
 export const metadata: Metadata = {
-  title: 'Crispy Wise Funciona? Análise Completa 2026 | snackproteico.com.br',
+  title: 'Crispy Wise Funciona? Análise Completa 2026',
   description: 'Crispy Wise realmente entrega 18g de proteína? Análise completa: ingredientes, avaliações verificadas, comparação com a embalagem e opinião de compradores reais. Veredicto honesto.',
   alternates: { canonical: 'https://snackproteico.com.br/crispy-wise-funciona' },
   openGraph: {

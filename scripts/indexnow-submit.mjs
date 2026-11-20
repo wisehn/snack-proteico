@@ -21,6 +21,7 @@ const URLS = [
   '/quantas-gramas-proteina-por-dia',
   '/crispy-wise-funciona',
   '/receitas-com-snack-proteico',
+  '/snack-wise-proteico',
   '/crispy-wise-vegan',
   '/crispy-wise-whey',
   '/choco-crispy-wise',

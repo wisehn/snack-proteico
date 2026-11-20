@@ -3,7 +3,7 @@ import SchemaInjector from '@/app/[product]/SchemaInjector'
 import { PRODUCTS } from '@/lib/products'
 
 export const metadata: Metadata = {
-  title: 'Snack Proteico para Emagrecer: Como Funciona e Qual Escolher | snackproteico.com.br',
+  title: 'Snack Proteico para Emagrecer: Como Funciona e Qual Escolher',
   description: 'Proteína emagrece? Snack proteico ajuda a perder peso? Guia baseado em evidências: saciedade, termogênese, preservação muscular e qual produto escolher. Crispy Wise: 12–18g por 30g.',
   alternates: { canonical: 'https://snackproteico.com.br/snack-proteico-emagrecer' },
   openGraph: {

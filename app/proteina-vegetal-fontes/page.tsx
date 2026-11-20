@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import SchemaInjector from '@/app/[product]/SchemaInjector'
 
 export const metadata: Metadata = {
-  title: 'Proteína Vegetal: Fontes, Qualidade e Como Comparar | snackproteico.com.br',
+  title: 'Proteína Vegetal: Fontes, Qualidade e Como Comparar',
   description: 'Guia completo sobre fontes de proteína vegetal: ervilha, soja, arroz, cânhamo e grão-de-bico. DIAAS, aminoácidos essenciais, biodisponibilidade e qual é melhor para cada objetivo.',
   alternates: { canonical: 'https://snackproteico.com.br/proteina-vegetal-fontes' },
   openGraph: {

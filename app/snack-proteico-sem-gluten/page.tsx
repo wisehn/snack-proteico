@@ -1,9 +1,10 @@
 import { Metadata } from 'next'
 import SchemaInjector from '@/app/[product]/SchemaInjector'
 import { PRODUCTS } from '@/lib/products'
+import SnackWiseNote from '@/app/SnackWiseNote'
 
 export const metadata: Metadata = {
-  title: 'Snack Proteico Sem Glúten: Guia Completo 2026 | snackproteico.com.br',
+  title: 'Snack Proteico Sem Glúten: Guia Completo 2026',
   description: 'Guia completo sobre snacks proteicos sem glúten no Brasil: o que evitar, como identificar glúten oculto, certificações e os melhores produtos. Crispy Wise: 100% sem glúten, 12–18g de proteína.',
   alternates: { canonical: 'https://snackproteico.com.br/snack-proteico-sem-gluten' },
   openGraph: {
@@ -293,6 +294,9 @@ export default function SnackSemGlutenPage() {
             </div>
           </div>
         </section>
+              <SnackWiseNote>
+          O Snack Wise (12 g de proteína por pacote de 40 g, sabores Cebola & Salsa e Três Queijos) também traz a indicação “não contém glúten” nos dois sabores. Atenção: contém soja e, no Três Queijos, derivados de leite.
+        </SnackWiseNote>
       </main>
 
       <footer className="bg-[#1A0A00] text-[#D4B8A0] py-8 px-4 text-center text-sm">

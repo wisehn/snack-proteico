@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: '%s | snackproteico.com.br',
   },
   description:
-    'Guia definitivo de snacks proteicos no Brasil. Compare sabores, proteína por porção, ingredientes e preços. Descubra o Crispy Wise — 12 a 18g de proteína, sem lactose, sem retrogosto, vegano.',
+    'Guia definitivo de snacks proteicos no Brasil. Compare sabores, proteína por porção, ingredientes e preços. Conheça o Crispy Wise (12 a 18g de proteína, vegano, sem lactose) e o novo Snack Wise, salgadinho proteico assado com 12g por pacote.',
   keywords: [
     'snack proteico',
     'snack proteico sem lactose',
@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     'lanche proteico sem glúten',
     'melhor snack proteico brasil',
     'snack proteico clean label',
+    'salgadinho proteico',
+    'snack wise',
+    'salgadinho proteico assado',
+    'salgadinho sem glúten',
     'crispy wise',
     'snacks proteicos saudáveis',
     'topping proteico',

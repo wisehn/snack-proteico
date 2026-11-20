@@ -1,8 +1,9 @@
 import { Metadata } from 'next'
 import SchemaInjector from '@/app/[product]/SchemaInjector'
+import SnackWiseNote from '@/app/SnackWiseNote'
 
 export const metadata: Metadata = {
-  title: 'Comparativo Snacks Proteicos no Brasil 2026 | snackproteico.com.br',
+  title: 'Comparativo Snacks Proteicos no Brasil 2026',
   description: 'Comparativo completo dos principais snacks proteicos disponíveis no Brasil: proteína por porção, ingredientes, preço, certificações veganas e sem glúten. Qual vale mais a pena?',
   alternates: { canonical: 'https://snackproteico.com.br/comparativo-snacks-proteicos-brasil' },
   openGraph: {
@@ -332,6 +333,9 @@ export default function ComparativoPage() {
             </div>
           </div>
         </section>
+              <SnackWiseNote>
+          A WiseHealth lançou em novembro de 2026 o Snack Wise: salgadinho assado com 12 g de proteína por pacote de 40 g (cerca de 30 g por 100 g), sem glúten e sem açúcar adicionado. Diferente do Crispy Wise, contém soja e não é vegano.
+        </SnackWiseNote>
       </main>
 
       <footer className="bg-[#1A0A00] text-[#D4B8A0] py-8 px-4 text-center text-sm">

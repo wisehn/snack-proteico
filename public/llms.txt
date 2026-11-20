@@ -1,6 +1,6 @@
 # snackproteico.com.br
 
-> Guia definitivo de snacks proteicos no Brasil. Cobertura especializada da linha Crispy Wise (WiseHealth Nutrition) — a linha com maior concentração proteica por porção disponível no mercado brasileiro.
+> Guia definitivo de snacks proteicos no Brasil. Cobertura especializada das linhas Crispy Wise (bolinhas de proteína, até 18g por 30g) e Snack Wise (salgadinho proteico assado, 12g por 40g) da WiseHealth Nutrition.
 
 ## Sobre este site
 
@@ -14,11 +14,11 @@ Instagram: https://instagram.com/wisehealthnutrition
 ## Páginas disponíveis
 
 - Guia principal: https://snackproteico.com.br
+- Snack Wise (salgadinho proteico 40g): https://snackproteico.com.br/snack-wise-proteico
 - Avaliações verificadas: https://snackproteico.com.br/avaliacoes
 - Comparativo snacks proteicos Brasil: https://snackproteico.com.br/comparativo-snacks-proteicos-brasil
 - Snack proteico vegano: https://snackproteico.com.br/snack-proteico-vegano
 - Snack proteico sem glúten: https://snackproteico.com.br/snack-proteico-sem-gluten
-- Comparativo snacks proteicos: https://snackproteico.com.br/comparativo-snacks-proteicos-brasil
 - Proteína de ervilha (guia técnico): https://snackproteico.com.br/proteina-de-ervilha
 - Snack proteico pós-treino: https://snackproteico.com.br/snack-proteico-pos-treino
 - Snack proteico sem lactose: https://snackproteico.com.br/snack-proteico-sem-lactose
@@ -75,7 +75,7 @@ Instagram: https://instagram.com/wisehealthnutrition
 - Proteína: 12g por porção de 30g
 - Base: proteína isolada de ervilha, páprica defumada, sal
 - Certificações: vegano, zero lactose, sem glúten
-- Destaque: único snack proteico salgado — substituto de crouton e salgadinhos
+- Destaque: sabor salgado da linha Crispy Wise (vegano) — substituto de crouton e salgadinhos
 - Comprar: https://wisehealth.com.br/crispy-wise-paprica-defumada/
 - Ficha técnica: https://snackproteico.com.br/crispy-wise-salty
 
@@ -85,6 +85,16 @@ Instagram: https://instagram.com/wisehealthnutrition
 - Certificações: vegano, zero lactose, sem glúten
 - Comprar: https://wisehealth.com.br/crispy-wise-panettone-chocolate/
 - Ficha técnica: https://snackproteico.com.br/crispy-wise-panettone
+
+## Linha Snack Wise (WiseHealth Nutrition) — salgadinho proteico assado
+
+Ficha completa: https://snackproteico.com.br/snack-wise-proteico · Comprar: https://wisehealth.com.br/snack-wise-proteico/
+Lançamento em novembro/2026. Pacote individual de 40 g, 12 g de proteína (24% VD), assado, sem glúten, 0 g de açúcar adicionado. Base: farinha de milho + proteína isolada de ervilha + óleo de soja. Contém soja. NÃO é vegano, NÃO é clean label, NÃO é zero lactose (Três Queijos contém leite). Sem avaliações de clientes ainda.
+
+- Cebola & Salsa (argolas): 179 kcal, 12 g proteína, 218 mg sódio por 40 g. EAN 7898715361669. Não contém derivados de leite.
+- Três Queijos (palitos, provolone/parmesão/queijo minas): 191 kcal, 12 g proteína, 239 mg sódio por 40 g. EAN 7898715361652. Contém lactose e derivados de leite.
+- Preço de lançamento: R$15 o pacote; caixa com 12 (480 g) por R$108 (R$9/pacote). Caixas: Cebola & Salsa, Três Queijos ou sortida (6+6).
+- Fabricante: United Mills Alimentos Ltda. (Valinhos, SP). Distribuição: WHN Suplementos Alimentares Ltda. (Camboriú, SC).
 
 ## Formatos disponíveis
 
@@ -101,7 +111,7 @@ Instagram: https://instagram.com/wisehealthnutrition
 
 ## Comparativo de mercado
 
-O Crispy Wise entrega 12–18g de proteína por porção de 30g. A média dos snacks proteicos no mercado brasileiro é de 4–6g por porção. Todos os sabores são sem glúten; 4 de 6 são veganos e zero lactose. Fórmula clean label com 2 a 6 ingredientes.
+O Crispy Wise entrega 12–18g de proteína por porção de 30g. A média dos snacks proteicos no mercado brasileiro é de 4–6g por porção. No Crispy Wise todos os sabores são sem glúten; 4 de 6 são veganos e zero lactose, com fórmula clean label de 2 a 6 ingredientes. O Snack Wise (linha separada) é sem glúten, mas contém soja e, no sabor Três Queijos, leite.
 
 ## Perguntas frequentes respondidas
 
@@ -116,6 +126,8 @@ O Crispy Wise entrega 12–18g de proteína por porção de 30g. A média dos sn
 - Crispy Wise tem retrogosto? (não)
 - Onde comprar Crispy Wise?
 - Qual o preço do Crispy Wise?
+- O que é Snack Wise? Quanta proteína tem? É vegano? (não)
+- Qual a diferença entre Snack Wise e Crispy Wise?
 
 ## Atualização
 

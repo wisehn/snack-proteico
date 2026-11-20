@@ -1,9 +1,10 @@
 import { Metadata } from 'next'
 import SchemaInjector from '@/app/[product]/SchemaInjector'
 import { PRODUCTS } from '@/lib/products'
+import SnackWiseNote from '@/app/SnackWiseNote'
 
 export const metadata: Metadata = {
-  title: 'O que é Snack Proteico? Definição, Critérios e Como Escolher | snackproteico.com.br',
+  title: 'O que é Snack Proteico? Definição, Critérios e Como Escolher',
   description: 'O que define um snack proteico de verdade? Critérios de proteína mínima, fontes de qualidade, diferença entre "com proteína" e "proteico". Guia para não cair em marketing.',
   alternates: { canonical: 'https://snackproteico.com.br/o-que-e-snack-proteico' },
   openGraph: {
@@ -194,6 +195,9 @@ export default function OQueESnackProteico() {
             </div>
           </div>
         </section>
+              <SnackWiseNote>
+          Além de bolinhas crocantes como o Crispy Wise, existem snacks proteicos no formato de salgadinho, como o Snack Wise: assado, em pacote individual de 40 g com 12 g de proteína.
+        </SnackWiseNote>
       </main>
       <footer className="bg-[#1A0A00] text-[#D4B8A0] py-8 px-4 text-center text-sm">
         <a href="/" className="font-black text-white text-base">snack<span className="text-[#E8732A]">proteico</span>.com.br</a>

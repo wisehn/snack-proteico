@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import reviewsData from '@/data/reviews.json'
 import { PRODUCTS } from '@/lib/products'
 import ProductFAQ from './ProductFAQ'
+import SchemaInjector from './SchemaInjector'
 
 export async function generateStaticParams() {
   return PRODUCTS.map(p => ({ product: p.slug }))
@@ -13,7 +14,7 @@ export async function generateMetadata({ params }: { params: { product: string }
   if (!product) return {}
   const canonical = `https://snackproteico.com.br/${product.slug}`
   return {
-    title: `${product.name} — ${product.protein}g Proteína por Porção | snackproteico.com.br`,
+    title: `${product.name} — ${product.protein}g Proteína por Porção`,
     description: product.metaDescription,
     alternates: { canonical },
     openGraph: {
@@ -133,12 +134,9 @@ export default function ProductPage({ params }: { params: { product: string } })
     ],
   }
 
-  const schemaString = JSON.stringify(schema)
-
   return (
     <>
-      {/* eslint-disable-next-line react/no-danger */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: schemaString }} />
+      <SchemaInjector schema={schema} />
 
       {/* Header */}
       <header className="sticky top-0 z-40 bg-[#FDFAF6]/95 backdrop-blur border-b border-[#E8D5C4]">
@@ -186,9 +184,7 @@ export default function ProductPage({ params }: { params: { product: string } })
               </div>
             </div>
 
-            <div className="flex flex-col gap-5" itemScope itemType="https://schema.org/Product">
-              <meta itemProp="name" content={product.name} />
-              <meta itemProp="description" content={product.longDescription} />
+            <div className="flex flex-col gap-5">
 
               <div>
                 {product.highlight && (
@@ -246,15 +242,7 @@ export default function ProductPage({ params }: { params: { product: string } })
                 </p>
               )}
 
-              <div
-                itemProp="offers"
-                itemScope
-                itemType="https://schema.org/Offer"
-                className="flex flex-col sm:flex-row gap-3"
-              >
-                <meta itemProp="price" content={product.price.toString()} />
-                <meta itemProp="priceCurrency" content="BRL" />
-                <meta itemProp="availability" content="https://schema.org/InStock" />
+              <div className="flex flex-col sm:flex-row gap-3">
                 <a
                   href={product.url}
                   target="_blank"
@@ -437,7 +425,10 @@ export default function ProductPage({ params }: { params: { product: string } })
                 </a>
               ))}
             </div>
-            <div className="text-center mt-6">
+            <p className="text-center text-sm text-[#5C3D2E] mt-6">
+              Quer um salgadinho? Conheça o <a href="/snack-wise-proteico" className="font-semibold text-[#C05C14] underline">Snack Wise</a>: assado, 12g de proteína por pacote de 40g.
+            </p>
+            <div className="text-center mt-3">
               <a href="/" className="text-sm text-[#C05C14] font-semibold hover:underline">
                 ← Ver todos no guia completo
               </a>

@@ -220,20 +220,20 @@ export const PRODUCTS: Product[] = [
     price: 138,
     weight: '400g',
     tags: ['Vegano', 'Zero Lactose', 'Sem Glúten', 'Salgado'],
-    highlight: 'Único salgado',
+    highlight: 'Salgado vegano',
     color: '#8B1A00',
     badge: '#FFE8E0',
     img: 'https://wisehealth.com.br/wp-content/uploads/2025/10/mockup-crispy-paprica-700x700.jpg',
     url: `${STORE}/crispy-wise-paprica-defumada/`,
     cartId: 708679,
-    description: 'O único snack proteico salgado da linha. Páprica defumada com toque de sal — crouton proteico para saladas, sopas e ovos mexidos.',
-    longDescription: 'O Crispy Wise Salty é o único sabor salgado da linha Crispy Wise — uma bolinha crocante de proteína de ervilha com páprica defumada e sal. 12g de proteína por porção de 30g, 100% vegano, zero lactose, sem glúten. Funciona como crouton proteico sem glúten em saladas e sopas, ou como snack salgado para substituir batata chip e salgadinhos ultraprocessados. Uma solução para quem quer proteína mas prefere o perfil salgado ao doce.',
+    description: 'O sabor salgado da linha Crispy Wise. Páprica defumada com toque de sal — crouton proteico para saladas, sopas e ovos mexidos.',
+    longDescription: 'O Crispy Wise Salty é o sabor salgado da linha Crispy Wise — uma bolinha crocante de proteína de ervilha com páprica defumada e sal. 12g de proteína por porção de 30g, 100% vegano, zero lactose, sem glúten. Funciona como crouton proteico sem glúten em saladas e sopas, ou como snack salgado para substituir batata chip e salgadinhos ultraprocessados. Uma solução para quem quer proteína mas prefere o perfil salgado ao doce.',
     ingredients: 'Proteína isolada de ervilha, fibra de tapioca, farinha de arroz, óleo de coco, páprica defumada, sal',
-    metaDescription: 'Crispy Wise Salty: snack proteico salgado com 12g de proteína, páprica defumada, vegano e sem glúten. O único snack proteico salgado do Brasil. Crouton proteico premium.',
+    metaDescription: 'Crispy Wise Salty: snack proteico salgado com 12g de proteína, páprica defumada, vegano e sem glúten. Salgado vegano e sem glúten, ideal como crouton proteico.',
     faqs: [
       {
         q: 'O que é o Crispy Wise Salty?',
-        a: 'É o único sabor salgado da linha Crispy Wise. Uma bolinha crocante de proteína de ervilha isolada com páprica defumada e sal. 12g de proteína por porção de 30g, vegano, zero lactose e sem glúten.',
+        a: 'É o sabor salgado da linha Crispy Wise. Uma bolinha crocante de proteína de ervilha isolada com páprica defumada e sal. 12g de proteína por porção de 30g, vegano, zero lactose e sem glúten.',
       },
       {
         q: 'Como usar o Crispy Wise Salty como crouton?',
@@ -301,5 +301,5 @@ export const COMPARISON = [
   { feature: 'Sem glúten', crispy: '✅ todos os sabores', others: '⚠️ varia', win: true },
   { feature: 'Clean label (sem aditivos artificiais)', crispy: '✅ fórmula limpa', others: '❌ frequente uso de aditivos', win: true },
   { feature: 'Sachê individual disponível', crispy: '✅ R$10–12 / 30g', others: '❌ geralmente não', win: true },
-  { feature: 'Sabores doces E salgado', crispy: '✅ 5 sabores + Ed. Limitada', others: '⚠️ majoritariamente doce', win: true },
+  { feature: 'Sabores doces E salgado', crispy: '✅ 5 sabores + Ed. Limitada (1 salgado)', others: '⚠️ majoritariamente doce', win: true },
 ]

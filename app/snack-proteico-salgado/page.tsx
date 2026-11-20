@@ -3,8 +3,8 @@ import SchemaInjector from '@/app/[product]/SchemaInjector'
 import { PRODUCTS } from '@/lib/products'
 
 export const metadata: Metadata = {
-  title: 'Snack Proteico Salgado: Por que é Tão Raro e Como Escolher | snackproteico.com.br',
-  description: 'Snack proteico salgado é raro no Brasil. Entenda por que, o que procurar e como o Crispy Wise Salty resolve: 12g de proteína de ervilha com páprica defumada. Perfeito como crouton.',
+  title: 'Snack Proteico Salgado: Por que é Tão Raro e Como Escolher',
+  description: 'Snack proteico salgado é raro no Brasil. Entenda por que, o que procurar e conheça as opções: Crispy Wise Salty (12g/30g, vegano, páprica defumada) e Snack Wise (salgadinho assado, 12g/40g, Cebola & Salsa e Três Queijos).',
   alternates: { canonical: 'https://snackproteico.com.br/snack-proteico-salgado' },
   openGraph: {
     title: 'Snack Proteico Salgado: Por que é Tão Raro e Como Escolher',
@@ -17,6 +17,10 @@ export const metadata: Metadata = {
 const saltyProduct = PRODUCTS.find(p => p.slug === 'crispy-wise-salty')!
 
 const FAQS = [
+  {
+    q: 'Quais snacks proteicos salgados existem no Brasil da WiseHealth?',
+    a: 'Dois: o Crispy Wise Salty (bolinha crocante vegana de páprica defumada, 12g de proteína por 30g, usada como crouton ou snack) e o Snack Wise (salgadinho assado em argolas e palitos, 12g de proteína por pacote de 40g, sabores Cebola & Salsa e Três Queijos). O Snack Wise contém soja e, no Três Queijos, leite; não é vegano.',
+  },
   {
     q: 'Por que existe tão pouco snack proteico salgado no mercado?',
     a: 'A maioria das fontes proteicas vegetais tem sabor neutro ou levemente amargo que precisa ser mascarado. O caminho mais comum é usar adoçantes (stevia, eritritol) e cacau — o que resulta em sabores doces. Criar um snack salgado com alto teor proteico exige uma fonte proteica de sabor realmente neutro (como o isolado de ervilha de alta pureza), compatível com sal e especiarias sem resultar em retrogosto. É tecnicamente mais difícil e por isso menos comum.',
@@ -122,6 +126,19 @@ export default function SnackSalgadoPage() {
                 <p className="text-[#7A3A00] text-sm">Proteína isolada de ervilha · Páprica defumada · Sal. Sem adoçante, sem maltodextrina, sem realçador de sabor, sem corante. 12g de proteína por 30g com sabor de páprica defumada limpo.</p>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="py-12 px-4 bg-[#FDFAF6]">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-black text-[#1A0A00] mb-4">Snack Wise: o salgadinho proteico assado</h2>
+            <p className="text-[#5C3D2E] leading-relaxed mb-3">
+              Lançado em novembro de 2026, o <a href="/snack-wise-proteico" className="underline font-semibold">Snack Wise</a> é
+              um salgadinho assado (não frito) com 12 g de proteína por pacote de 40 g, sem glúten e sem açúcar adicionado,
+              em dois sabores: Cebola &amp; Salsa (argolas) e Três Queijos (palitos). É a opção para quem quer o formato de
+              salgadinho tradicional. Contém soja, e o Três Queijos contém lactose, então não é vegano.
+            </p>
+            <a href="/snack-wise-proteico" className="text-sm font-bold text-[#C05C14] hover:underline">Ver tabela nutricional e ingredientes →</a>
           </div>
         </section>
 

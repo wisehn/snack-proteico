@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/proteina-vegetal-fontes`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${base}/o-que-e-snack-proteico`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${base}/quantas-gramas-proteina-por-dia`, lastModified: lastMod, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${base}/snack-wise-proteico`, lastModified: lastMod, changeFrequency: 'weekly', priority: 0.95 },
     ...PRODUCTS.map(p => ({
       url: `${base}/${p.slug}`,
       lastModified: lastMod,

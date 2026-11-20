@@ -528,6 +528,28 @@ export default function HomeClient({ hero, faqs }: { hero: HeroData; faqs: FaqIt
                 Ver todos os produtos em wisehealth.com.br →
               </CTAButton>
             </div>
+
+            <div className="mt-12 rounded-3xl border border-[#E8D5C4] bg-[#FFF8F0] p-6 md:p-8 grid md:grid-cols-[220px_1fr] gap-6 items-center">
+              <img
+                src="https://wisehealth.com.br/wp-content/uploads/2026/11/snack-wise-dois-sabores-principal-destaque-300x300.webp"
+                alt="Snack Wise salgadinho proteico: Cebola & Salsa e Três Queijos"
+                width={300}
+                height={300}
+                loading="lazy"
+                className="w-full max-w-[220px] mx-auto rounded-2xl"
+              />
+              <div>
+                <p className="text-[#C05C14] font-semibold text-xs uppercase tracking-wider mb-1">Novo · linha Snack Wise</p>
+                <h3 className="text-2xl font-black text-[#1A0A00] mb-2">Snack Wise: salgadinho proteico assado</h3>
+                <p className="text-[#5C3D2E] leading-relaxed mb-4">
+                  12 g de proteína por pacote de 40 g, assado (não frito), sem glúten e 0 g de açúcar adicionado.
+                  Sabores Cebola &amp; Salsa e Três Queijos. Contém soja; o Três Queijos contém leite.
+                </p>
+                <a href="/snack-wise-proteico" className="inline-flex px-6 py-3 rounded-full bg-[#1A0A00] text-white text-sm font-bold hover:brightness-125">
+                  Ver ficha e tabela nutricional →
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 

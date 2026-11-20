@@ -3,7 +3,7 @@ import SchemaInjector from '@/app/[product]/SchemaInjector'
 import { PRODUCTS } from '@/lib/products'
 
 export const metadata: Metadata = {
-  title: 'Snack Proteico Pós-Treino: Quando e Como Usar | snackproteico.com.br',
+  title: 'Snack Proteico Pós-Treino: Quando e Como Usar',
   description: 'Snack proteico é uma boa opção pós-treino? Janela anabólica, quantidade ideal de proteína, timing e quais produtos funcionam. Crispy Wise: 18g em 30g, zero preparo.',
   alternates: { canonical: 'https://snackproteico.com.br/snack-proteico-pos-treino' },
   openGraph: {
